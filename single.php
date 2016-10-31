@@ -18,9 +18,8 @@
                     $image = get_bloginfo('stylesheet_directory') . '/assets/img/thumbnail.jpg';
                 }
             ?>
-            <div id="hero-image" style="background-image: url('<?php echo $image; ?>');"></div>
 
-            <div class="post-details">
+            <div class="post-details" style="background-image: url('<?php echo $image; ?>');">
                 <header class="details">
                     <h3><?php the_title(); ?></h3>
                     <span><i></i> <?php the_author(); ?> | <?php the_time('m-d-Y'); ?> | <?php comments_number('No comments', '1 comment', '% comments'); ?></span>
