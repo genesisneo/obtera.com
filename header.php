@@ -3,8 +3,6 @@
 <html <?php language_attributes(); ?>>
 <head>
 
-    <title><?php bloginfo('name'); ?></title>
-
     <!-- META -->
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">

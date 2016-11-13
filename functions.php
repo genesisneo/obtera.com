@@ -1,5 +1,11 @@
 <?php
 
+/*
+Adding title theme support
+https://codex.wordpress.org/Title_Tag
+*/
+add_theme_support( 'title-tag' );
+
 /* Enable feature image on posts */
 add_theme_support('post-thumbnails');
 set_post_thumbnail_size(460, 310, true);
