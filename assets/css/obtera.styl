@@ -1,6 +1,6 @@
 
-//@import 'nib';
-@import 'C:/Users/Neo/AppData/Roaming/npm/node_modules/nib/lib/nib';
+// @import 'nib';
+// @import 'C:/Users/Neo/AppData/Roaming/npm/node_modules/nib/lib/nib';
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
 
 /* ******* keyframes ******* */
@@ -253,8 +253,8 @@ code
     .details
         position relative
         display block
-        margin 0 auto
-        padding 0
+        margin 1.250em auto
+        padding 0 1.250em
         color #333
         z-index 1
         
@@ -279,7 +279,7 @@ code
                 font 400 1.000rem/normal dashicons
         
         h3
-            margin 0.625em 0 0
+            margin 0
             font-size 1.250rem
             font-weight 300
     
@@ -299,6 +299,7 @@ code
         
         .details
             width 88vw
+            margin-top 0
             padding 16vh 0 24vh
             color #fff
             text-shadow 0 1px 1px rgba(0,0,0,0.25), 0 2px 2px rgba(0,0,0,0.25)
@@ -373,9 +374,13 @@ code
         & > .row
             position relative
             z-index 2
-                
-        .post
-            margin -10vh 0 0
+            
+        .item
+            
+            & > .post,
+            & > .attachment
+                margin -10vh 0 0
+                padding 1.250em
             
         &.format-standard .post-details .details i
             background-position 0 0
@@ -493,7 +498,7 @@ code
 .post,
 .attachment
     margin 0.625em 0
-    padding 0.625em
+    padding 0
     background #fafafa
     -webkit-box-shadow 0 0 0 1px #ccc
     -moz-box-shadow 0 0 0 1px #ccc
@@ -577,8 +582,8 @@ code
             content '\f125'
         
     & > p
-        margin 0.625em 0
-        padding 0
+        margin 1.250em 0
+        padding 0 1.250em
         font-size 0.875rem
         font-weight 400
         color #333
@@ -586,11 +591,12 @@ code
         &#back
             display none
             margin-top 0
+            padding-left 0
         
         &.categories,
         &.tags
             margin 0.625em 0 0
-            padding 0.625em 0
+            padding 0.625em 1.250em
             border-top 1px solid #eee
             font-size 0.750rem
 

@@ -76,4 +76,11 @@ $(function(){
         }
     });
 
+    /* Check if .item > div has .attachment */
+    if ($('.item > div').hasClass('attachment')) {
+        $('.details > h3').remove();
+        $('.details > span').remove();
+        $('.details > div').remove();
+    }
+
 });
