@@ -22,7 +22,7 @@
             <div class="post-details" style="background-image: url('<?php echo $image; ?>');">
                 <header class="details">
                     <h3><?php the_title(); ?></h3>
-                    <span><i></i> <?php the_author(); ?> | <?php the_time('m-d-Y'); ?> | <?php comments_number('No comments', '1 comment', '% comments'); ?></span>
+                    <span><i></i> <?php the_author_posts_link() ?> | <?php the_time('m-d-Y'); ?> | <a href="<?php comments_link(); ?>"><?php comments_number('No comments', '1 comment', '% comments'); ?></a></span>
                     <div class="at-above-post-page" style="margin-top:0.313em;"></div>
                 </header>
             </div>
