@@ -64,7 +64,6 @@
                         <?php // Post content ?>
                         <?php // the_content('...') or the_excerpt() ?>
                         <?php the_excerpt(); ?>
-                        <div class="at-above-post-page"></div>
                         <p class="categories">Categories: <?php the_category(' | '); ?></p>
                         <p class="tags"><?php the_tags('Tags: ', ' | ', ''); ?></p>
                     </div>
