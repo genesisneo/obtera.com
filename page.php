@@ -8,7 +8,7 @@
     <?php while (have_posts()) : the_post(); ?>
 
         <!-- Posts -->
-        <section id="posts" class="single">
+        <section id="posts" class="single format-<?php echo(get_post_format()) ?>">
 
             <?php
                 if ( has_post_thumbnail( $post -> ID ) ) {
@@ -22,7 +22,7 @@
             <div class="post-details" style="background-image: url('<?php echo $image; ?>');">
                 <header class="details">
                     <h3><?php the_title(); ?></h3>
-                    <span><i></i> <?php the_author(); ?> | <?php the_time('m-d-Y'); ?> | <?php comments_number('No comments', '1 comment', '% comments'); ?></span>
+                    <span><i></i> <?php the_author_posts_link() ?> | <?php the_time('m-d-Y'); ?> | <a href="<?php comments_link(); ?>"><?php comments_number('No comments', '1 comment', '% comments'); ?></a></span>
                     <div class="at-above-post-page" style="margin-top:0.313em;"></div>
                 </header>
             </div>
@@ -38,7 +38,9 @@
                             <?php // Post class ?>
                             <div <?php post_class(); ?>>
                                 <?php // Attachement ?>
-                                <p id="back"><a href="javascript:history.back()">Go back</a></p>
+                                <?php if ( is_attachment() ) { ?>
+                                    <p id="back"><a href="javascript:history.back()">Go back</a></p>
+                                <?php } ?>
                                 <?php // Post content ?>
                                 <?php the_content('...'); ?>
                                 <p class="categories">Categories: <?php the_category(' | '); ?></p>

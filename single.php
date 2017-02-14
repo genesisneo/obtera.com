@@ -38,7 +38,9 @@
                             <?php // Post class ?>
                             <div <?php post_class(); ?>>
                                 <?php // Attachement ?>
-                                <p id="back"><a href="javascript:history.back()">Go back</a></p>
+                                <?php if ( is_attachment() ) { ?>
+                                    <p id="back"><a href="javascript:history.back()">Go back</a></p>
+                                <?php } ?>
                                 <?php // Post content ?>
                                 <?php the_content('...'); ?>
                                 <p class="categories">Categories: <?php the_category(' | '); ?></p>
