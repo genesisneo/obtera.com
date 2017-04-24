@@ -138,8 +138,8 @@ if ( function_exists('register_sidebar') ) {
         'description' => 'Only one "Text" widget is currently supported. It will be use for "About us" section',
         'before_widget' => '',
         'after_widget' => '',
-        'before_title' => '<h1 id="aboutus">',
-        'after_title' => '</h1>'
+        'before_title' => '<h3 id="aboutus">',
+        'after_title' => '</h3>'
     ));
 }
 

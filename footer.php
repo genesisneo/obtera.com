@@ -5,12 +5,12 @@
     <div class="row">
 
         <div class="columns small-12 medium-4">
-            <h1 id="search">Search</h1>
+            <h3 id="search">Search</h3>
             <form id="search-form" class="search-form" role="search" method="get" action="<?php echo esc_url(home_url('/')); ?>">
                 <input type="text" id="search-input" name="s" placeholder="Search..." value="" />
                 <input type="submit" id="search-submit" value="" />
             </form>
-            <h1 id="followus">Follow us</h1>
+            <h3 id="followus">Follow us</h3>
             <ul class="footer-social-networks">
                 <li><a href="http://facebook.com/obteracom"><span class="facebook"></span>facebook.com/obteracom</a></li>
                 <li><a href="http://twitter.com/obteracom"><span class="twitter"></span>twitter.com/obteracom</a></li>

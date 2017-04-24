@@ -1,7 +1,7 @@
 
-// @import 'nib';
-@import 'C:/Users/Neo/AppData/Roaming/npm/node_modules/nib/lib/nib';
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
+@import 'nib';
+// @import 'C:/Users/Neo/AppData/Roaming/npm/node_modules/nib/lib/nib';
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,600,700');
 
 /* ******* keyframes ******* */
 
@@ -17,7 +17,7 @@
 body
     background #2196F3
     color #333
-    font-family 'Roboto', 'Arial', 'Helvetica', 'sans-serif'
+    font 100%/1.5 'Roboto', 'Arial', 'Helvetica', 'sans-serif'
     font-weight 400
     
 a
@@ -78,33 +78,33 @@ h6
     
 h1
     font-size 2.000rem
-    font-weight 700
+    font-weight 300
     margin 0.625em 0
     
 h2
     font-size 1.500rem
-    font-weight 700
-    margin 0.750em 0
+    font-weight 300
+    margin 0.875em 0
     
 h3
     font-size 1.125rem
-    font-weight 500
+    font-weight 400
     margin 1.000em 0
     
 h4
     font-size 1.000rem
-    font-weight 500
-    margin 1.250em 0
+    font-weight 400
+    margin 1.375em 0
     
 h5
     font-size 0.875rem
-    font-weight 400
-    margin 1.500em 0
+    font-weight 600
+    margin 1.625em 0
     
 h6
     font-size 0.625rem
-    font-weight 400
-    margin 2.250em 0
+    font-weight 700
+    margin 2.375em 0
     
 a
     color #1976D2
@@ -149,7 +149,6 @@ kbd,
 pre,
 samp
     font-family monospace
-    font-size 0.875em
     
 pre
     margin 0 0 0.625em
@@ -221,6 +220,7 @@ code
                 height 40px
                 background transparent url(../img/navigation-items.png) no-repeat
                 background-size 120px 40px
+                transition: all 0.25s ease-in-out 0s;
                 
                 &#nav-aboutus
                     background-position 0 0
@@ -259,7 +259,7 @@ code
         z-index 1
         
         span
-            color #777
+            color #999
             font-size 0.750rem
         
         i
@@ -280,8 +280,6 @@ code
         
         h3
             margin 0
-            font-size 1.250rem
-            font-weight 300
     
     img
         
@@ -315,10 +313,7 @@ code
                 
             h3
                 padding 0 0.625em
-                margin 0
                 font-size 200%
-                font-weight 500
-                line-height normal
 
 #posts
     padding 3.125em 0
@@ -332,10 +327,8 @@ code
     
             & > h3
                 margin 1.250em 0 0.625em
-                padding 0 0 0.25em
+                padding 0 0 0.313em
                 border-bottom 1px solid #ccc
-                font-size 1.250rem
-                font-weight 300
                 
             & > p
                 margin 0.625em 0
@@ -507,12 +500,8 @@ code
     margin 0.625em 0
     padding 0
     background #fafafa
-    -webkit-box-shadow 0 0 0 1px #ccc
-    -moz-box-shadow 0 0 0 1px #ccc
-    -ms-box-shadow 0 0 0 1px #ccc
-    -o-box-shadow 0 0 0 1px #ccc
     box-shadow 0 0 0 1px #ccc
-    color #333333
+    transition: all 0.25s ease-in-out 0s;
     overflow hidden
     
     &:hover
@@ -593,7 +582,7 @@ code
         padding 0 1.250em
         font-size 0.875rem
         font-weight 400
-        color #333
+        color #666
         
         &#back
             display none
@@ -616,7 +605,7 @@ code
             display inline-block
             margin 0
             padding 0
-            color #333
+            color #666
             text-decoration none
             
     .custom-button
@@ -628,6 +617,7 @@ code
         font-size 0.875rem
         text-align center
         text-decoration none
+        transition: all 0.25s ease-in-out 0s;
         
         &:hover
             background lighten(#FF5252, 10%)
@@ -647,7 +637,7 @@ code
         
         .wp-caption-text
             margin-top 0.625em
-            color #777
+            color #999
             
         &.gallery-columns-1 .gallery-item
             width 100% !important
@@ -680,7 +670,7 @@ code
         
         & > p
             margin 0.625em 0
-            color #777
+            color #999
             text-align center
             
     .video-container
@@ -729,7 +719,7 @@ code
                     display table
                     
                     .comment-author-cell
-                        color #777
+                        color #999
                         display table-cell
                         line-height 1.250em
                         vertical-align middle
@@ -792,6 +782,7 @@ code
                     outline none
                     text-align center
                     text-decoration none
+                    transition: all 0.25s ease-in-out 0s;
                     
                     &:hover
                         background lighten(#FF5252, 10%)
@@ -839,6 +830,7 @@ code
         font-size 0.875rem
         text-align center
         text-decoration none
+        transition: all 0.25s ease-in-out 0s;
         
         &:hover
             background lighten(#FF5252, 10%)
@@ -854,12 +846,6 @@ code
     padding 0.625em 0.625em 6.250em
     color #fff
     
-    h1
-        margin 0.625em 0
-        padding 0
-        font-size 1.250rem
-        font-weight 300
-        
     p
         margin 0.625em 0
         padding 0
@@ -901,6 +887,7 @@ code
             background-position -60px 0
             border none
             outline none
+            transition: all 0.25s ease-in-out 0s;
             
             &:hover
                 background-color lighten(#1976D2, 10%)
