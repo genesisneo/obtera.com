@@ -497,12 +497,13 @@ code
 
 .post,
 .attachment
+    position relative
     margin 0.625em 0
     padding 0
     background #fafafa
     box-shadow 0 0 0 1px #ccc
-    transition: all 0.25s ease-in-out 0s;
     overflow hidden
+    transition: all 0.25s ease-in-out 0s;
     
     &:hover
         box-shadow 0 2px 4px rgba(0,0,0,0.25)
@@ -844,7 +845,10 @@ code
 
 #footer
     padding 0.625em 0.625em 6.250em
-    color #fff
+    color #c5e5ff
+    
+    h3
+        color #fff
     
     p
         margin 0.625em 0
@@ -913,11 +917,12 @@ code
                 
             a
                 display block
-                color #fff
+                color #c5e5ff
                 text-decoration none
                 
                 &:hover,
                 &:active
+                    color #fff
                     text-decoration underline
                     
                 span

@@ -32,7 +32,7 @@
 
         <div class="columns">
             <p class="copyrights">
-                2015 &copy; All rights reserved | obtera.com
+                2017 &copy; All rights reserved | obtera.com
             </p>
         </div>
 
