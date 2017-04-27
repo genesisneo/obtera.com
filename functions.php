@@ -46,7 +46,7 @@ add_filter('excerpt_length', 'new_excerpt_length');
 
 /* Adding supports for posts formats */
 add_theme_support( 'post-formats', array(
-	'aside', 'image', 'video', 'quote', 'link', 'gallery', 'status', 'audio', 'chat'
+    'aside', 'image', 'video', 'quote', 'link', 'gallery', 'status', 'audio', 'chat'
 ) );
 
 /*
@@ -55,7 +55,7 @@ https://wordpress.org/support/topic/adding-a-wrapping-div-to-video-embeds
 */
 add_filter('embed_oembed_html', 'my_embed_oembed_html', 99, 4);
 function my_embed_oembed_html($html, $url, $attr, $post_id) {
-  return '<div class="video-container aligncenter">' . $html . '</div>';
+    return '<div class="video-container aligncenter">' . $html . '</div>';
 }
 
 /*
