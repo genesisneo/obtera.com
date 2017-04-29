@@ -29,7 +29,7 @@
     <meta name="msapplication-square150x150logo" content="<?php bloginfo('template_url'); ?>/assets/img/icons/icon150x150.png" />
     <meta name="msapplication-wide310x150logo" content="<?php bloginfo('template_url'); ?>/assets/img/icons/icon310x150.png" />
     <meta name="msapplication-square310x310logo" content="<?php bloginfo('template_url'); ?>/assets/img/icons/icon310x310.png" />
-    <meta name="msapplication-notification" content="frequency=30;polling-uri=<?php bloginfo('rss_url'); ?>;cycle=1"/>
+    <meta name="msapplication-notification" content="frequency=30;polling-uri=<?php bloginfo('rss2_url'); ?>;cycle=0"/>
     <meta name="msvalidate.01" content="1B42EF49F3894041D55ABBD83A0337D0" />
 
     <!-- STYLE -->
