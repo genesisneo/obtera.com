@@ -22,7 +22,7 @@
             <div class="post-details" style="background-image: url('<?php echo $image; ?>');">
                 <header class="details">
                     <h3><?php the_title(); ?></h3>
-                    <span><i></i> <?php the_author_posts_link() ?> | <?php the_time('m-d-Y'); ?> | <a href="<?php comments_link(); ?>"><?php comments_number('No comments', '1 comment', '% comments'); ?></a></span>
+                    <span><i></i> <?php the_author_posts_link() ?> / <?php the_time('m-d-Y'); ?> / <a href="<?php comments_link(); ?>"><?php comments_number('No comments', '1 comment', '% comments'); ?></a></span>
                     <div class="at-above-post-page" style="margin-top:0.313em;"></div>
                 </header>
             </div>
@@ -43,8 +43,8 @@
                                 <?php } ?>
                                 <?php // Post content ?>
                                 <?php the_content('...'); ?>
-                                <p class="categories">Categories: <?php the_category(' | '); ?></p>
-                                <p class="tags"><?php the_tags('Tags: ', ' | ', ''); ?></p>
+                                <p class="categories">Categories: <?php the_category(' / '); ?></p>
+                                <p class="tags"><?php the_tags('Tags: ', ' / ', ''); ?></p>
                                 <?php // Comments Template ?>
                                 <?php comments_template(); ?>
                             </div>

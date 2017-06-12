@@ -49,15 +49,15 @@
                                 ?>
                                 <header class="details">
                                     <h3><?php echo wp_trim_words( get_the_title(),10); ?></h3>
-                                    <span><i></i> <?php the_author(); ?> | <?php the_time('m-d-Y'); ?> | <?php comments_number('No comments', '1 comment', '% comments'); ?></span>
+                                    <span><i></i> <?php the_author(); ?> / <?php the_time('m-d-Y'); ?> / <?php comments_number('No comments', '1 comment', '% comments'); ?></span>
                                 </header>
                             </a>
                             <?php // Post content ?>
                             <?php // the_content('...') or the_excerpt() ?>
                             <?php the_excerpt(); ?>
                             <div class="at-above-post-page"></div>
-                            <p class="categories">Categories: <?php the_category(' | '); ?></p>
-                            <p class="tags"><?php the_tags('Tags: ', ' | ', ''); ?></p>
+                            <p class="categories">Categories: <?php the_category(' / '); ?></p>
+                            <p class="tags"><?php the_tags('Tags: ', ' / ', ''); ?></p>
                         </div>
                     </article>
 
