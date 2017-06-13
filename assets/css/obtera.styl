@@ -3,6 +3,16 @@
 @import 'C:/Users/Neo/AppData/Roaming/npm/node_modules/nib/lib/nib';
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,600,700');
 
+/* ******* box shadows ******* */
+
+shadow-none-box-shadow = none
+shadow-elevation-2dp-box-shadow = 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2)
+shadow-elevation-4dp-box-shadow = 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.4)
+shadow-elevation-6dp-box-shadow = 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.4)
+shadow-elevation-8dp-box-shadow = 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.4)
+shadow-elevation-12dp-box-shadow = 0 12px 16px 1px rgba(0, 0, 0, 0.14), 0 4px 22px 3px rgba(0, 0, 0, 0.12), 0 6px 7px -4px rgba(0, 0, 0, 0.4)
+shadow-elevation-16dp-box-shadow = 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.4)
+
 /* ******* keyframes ******* */
 
 @keyframes slide {
@@ -381,6 +391,9 @@ code
                 margin -10vh 0 0
                 padding 1.250em
                 
+                &:hover
+                    box-shadow shadow-elevation-2dp-box-shadow
+                
                 & > p
                     padding-left 0
                     padding-right 0
@@ -506,9 +519,12 @@ code
     padding 0
     background #fff
     border-radius 2px
-    box-shadow 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2)
+    box-shadow shadow-elevation-2dp-box-shadow
     overflow hidden
     transition: all 0.25s ease-in-out 0s
+    
+    &:hover
+        box-shadow shadow-elevation-8dp-box-shadow
 
     &.format-standard .post-details .details i
         background-position 0 0
