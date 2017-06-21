@@ -3,7 +3,11 @@
 @import 'C:/Users/Neo/AppData/Roaming/npm/node_modules/nib/lib/nib';
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,600,700');
 
-/* ******* box shadows ******* */
+/* ******* variables ******* */
+
+base-color = #2196f3
+highlight-color = #FF5252
+dark-base-color = darken(base-color, 16%)
 
 shadow-none-box-shadow = none
 shadow-elevation-2dp-box-shadow = 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2)
@@ -27,15 +31,15 @@ shadow-elevation-16dp-box-shadow = 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30
 /* ******* global styles ******* */
 
 body
-    background #2196F3
+    background base-color
     color #333
     font 100%/1.5 'Roboto', 'Arial', 'Helvetica', 'sans-serif'
     font-weight 400
-    
+
 a
     -webkit-tap-highlight-color rgba(0,0,0,0)
     -webkit-tap-highlight-color transparent
-    
+
 ::-webkit-input-placeholder,
 :-webkit-input-placeholder,
 ::-moz-placeholder,
@@ -43,7 +47,7 @@ a
 ::-ms-input-placeholder,
 :-ms-input-placeholder
     color #ccc
-  
+
 input,
 textarea
     border 1px solid #ddd
@@ -62,24 +66,24 @@ textarea
     display block
     margin-right auto
     margin-left auto
-    
+
 blockquote.alignleft,
 img.alignleft,
 .wp-caption.alignleft
     margin 0.313em 1.600em 1.600em 0
-    
+
 blockquote.alignright,
 img.alignright,
 .wp-caption.alignright
     margin 0.313em 0 1.600em 1.600em
-    
+
 blockquote.aligncenter,
 img.aligncenter,
 .wp-caption.aligncenter
     clear both
     margin-top 0.313em
     margin-bottom 1.600em
-    
+
 h1,
 h2,
 h3,
@@ -87,45 +91,45 @@ h4,
 h5,
 h6
     padding 0
-    
+
 h1
     font-size 2.000rem
     font-weight 300
     margin 0.625em 0
-    
+
 h2
     font-size 1.500rem
     font-weight 300
     margin 0.875em 0
-    
+
 h3
     font-size 1.125rem
     font-weight 400
     margin 1.000em 0
-    
+
 h4
     font-size 1.000rem
     font-weight 400
     margin 1.375em 0
-    
+
 h5
     font-size 0.875rem
     font-weight 600
     margin 1.625em 0
-    
+
 h6
     font-size 0.625rem
     font-weight 700
     margin 2.375em 0
-    
+
 a
-    color #1976D2
+    color dark-base-color
     text-decoration none
     
     &:hover,
     &:active
         text-decoration underline
-        
+
 blockquote
     position relative
     color #0D89EC
@@ -135,7 +139,7 @@ blockquote
     a,
     a:hover,
     a:active
-        color #ff5252
+        color highlight-color
     
     &:before
         content ''
@@ -150,18 +154,18 @@ blockquote
         background transparent url(../img/post-quote.png) no-repeat
         background-size 32px 32px
         background-position 50%
-        
+
 ul,
 ol
     font-size 0.875rem
     font-weight 400
-    
+
 code,
 kbd,
 pre,
 samp
     font-family monospace
-    
+
 pre
     margin 0 0 0.625em
     padding 0.625em
@@ -173,7 +177,7 @@ pre
     outline 1px solid #ccc
     white-space pre-wrap
     word-wrap break-word
-    
+
 code
     margin 0 0 0.625em
     padding 0.313em 0.625em
@@ -181,7 +185,7 @@ code
     border solid #6ce26c
     border-width 0 0 0 2px
     outline 1px solid #ccc
-    
+
 /* Admin Styles */
 
 #wpadminbar
@@ -196,9 +200,7 @@ code
     padding 0
     width 100%
     height 3.125em
-    background rgba(33,150,243,0.8)
-    -webkit-backdrop-filter blur(16px)
-    backdrop-filter blur(16px)
+    background base-color
     line-height 3.125em
     z-index 10
     
@@ -292,7 +294,7 @@ code
         i
             position relative
             display inline-block
-            top 3px
+            top 2px
             margin 0 6px 0 0
             padding 0
             width 12px
@@ -302,7 +304,7 @@ code
             background-position 0 0
             
             &:before
-                color #ff5252
+                color highlight-color
                 font 400 1.000rem/normal dashicons
         
         h3
@@ -364,7 +366,7 @@ code
                 font-weight 400
                 
                 a
-                    color #1976D2
+                    color dark-base-color
                     text-decoration none
                     
                     &:hover,
@@ -646,7 +648,7 @@ code
         margin 0 auto
         padding 0.625em 1.250em
         color #fff
-        background #FF5252
+        background highlight-color
         border-radius 2px
         font-size 0.875rem
         text-align center
@@ -654,11 +656,11 @@ code
         transition all 0.25s ease-in-out 0s
         
         &:hover
-            background lighten(#FF5252, 10%)
+            background lighten(highlight-color, 10%)
             box-shadow 0 2px 4px rgba(0,0,0,0.25)
             
         &:active
-            background darken(#FF5252, 10%)
+            background darken(highlight-color, 10%)
             box-shadow inset 0 2px 4px rgba(0,0,0,0.25)
             
     .gallery
@@ -731,7 +733,7 @@ code
             list-style none
             
         a
-            color #1976D2
+            color dark-base-color
             text-decoration none
             
             &:hover,
@@ -770,16 +772,16 @@ code
                     
                 .comment-edit-link,
                 .comment-reply-link
-                    color #FF5252
+                    color highlight-color
                     
                     &:hover
-                        color lighten(#FF5252, 10%)
+                        color lighten(highlight-color, 10%)
                         
                     &:active
-                        color darken(#FF5252, 10%)
+                        color darken(highlight-color, 10%)
                         
         .children
-            border-left 1px solid #2196F3
+            border-left 1px solid base-color
             
         #respond
             margin 0
@@ -787,7 +789,7 @@ code
             font-size 0.875rem
             
             .required
-                color #FF5252
+                color highlight-color
             
             .comment-form-author,
             .comment-form-email,
@@ -810,7 +812,7 @@ code
                     margin 0
                     padding 0.625em
                     color #fff
-                    background #FF5252
+                    background highlight-color
                     border none
                     font-size 0.875rem
                     outline none
@@ -819,11 +821,11 @@ code
                     transition all 0.25s ease-in-out 0s
                     
                     &:hover
-                        background lighten(#FF5252, 10%)
+                        background lighten(highlight-color, 10%)
                         box-shadow 0 2px 4px rgba(0,0,0,0.25)
                         
                     &:active
-                        background darken(#FF5252, 10%)
+                        background darken(highlight-color, 10%)
                         box-shadow inset 0 2px 4px rgba(0,0,0,0.25)
                         
 .attachment
@@ -860,7 +862,7 @@ code
         padding 0.625em
         width 7.813em
         color #fff
-        background #FF5252
+        background highlight-color
         border-radius 2px
         font-size 0.875rem
         text-align center
@@ -868,11 +870,11 @@ code
         transition all 0.25s ease-in-out 0s
         
         &:hover
-            background lighten(#FF5252, 10%)
+            background lighten(highlight-color, 10%)
             box-shadow 0 2px 4px rgba(0,0,0,0.25)
             
         &:active
-            background darken(#FF5252, 10%)
+            background darken(highlight-color, 10%)
             box-shadow inset 0 2px 4px rgba(0,0,0,0.25)
         
 /* Footer */
@@ -921,7 +923,7 @@ code
             padding 0
             width 30px
             height 30px
-            background #1976D2 url(../img/navigation-items.png) no-repeat
+            background dark-base-color url(../img/navigation-items.png) no-repeat
             background-size 90px 30px
             background-position -60px 0
             border none
@@ -930,11 +932,11 @@ code
             transition all 0.25s ease-in-out 0s
             
             &:hover
-                background-color lighten(#1976D2, 10%)
+                background-color lighten(dark-base-color, 10%)
                 box-shadow 0 2px 4px rgba(0,0,0,0.25)
                 
             &:active
-                background-color darken(#1976D2, 10%)
+                background-color darken(dark-base-color, 10%)
                 box-shadow inset 0 2px 4px rgba(0,0,0,0.25)
 
     .footer-social-networks
