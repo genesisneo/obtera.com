@@ -41,34 +41,6 @@
 
 </footer>
 
-<!-- Google Analytics -->
-<script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-    ga('create', 'UA-68704357-1', 'auto');
-    ga('send', 'pageview');
-</script>
-
-<!-- Sitelinks Search Box -->
-<!-- https://developers.google.com/structured-data/slsb-overview -->
-<script type="application/ld+json">
-{
-    "@context": "http://schema.org",
-    "@type": "WebSite",
-    "url": "http://obtera.com/",
-    "potentialAction": {
-        "@type": "SearchAction",
-        "target": "http://obtera.com/?s={query}",
-        "query-input": "required name=query"
-    }
-}
-</script>
-
-<!-- AddThis Analytics -->
-<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-562f202ecd1822ce" async="async"></script>
-
 <!-- WordPress Scripts -->
 <?php wp_footer(); ?>
 
