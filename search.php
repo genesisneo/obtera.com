@@ -49,7 +49,7 @@
                                 ?>
                                 <header class="details">
                                     <h3><?php echo wp_trim_words( get_the_title(),10); ?></h3>
-                                    <span><i></i> <?php the_author(); ?> / <?php the_time('m-d-Y'); ?> / <?php comments_number('No comments', '1 comment', '% comments'); ?></span>
+                                    <span><i></i> <?php the_author(); ?> / <?php the_time('m-d-Y'); ?></span>
                                 </header>
                             </a>
                             <?php // Post content ?>
