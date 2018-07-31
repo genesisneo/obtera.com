@@ -1,0 +1,27 @@
+.the-comments {
+  background-color: darken(#f8f9fa, 5%);
+  .post-comment {
+    .comment-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      .comment {
+        .media {
+          .author-avatar {
+            border-radius: 4rem;
+          }
+          .media-body {
+            .reply {
+              margin-top: 2px;
+            }
+          }
+        }
+        .children {
+          list-style: none;
+          margin: 0;
+          padding: 0 0 0 2rem;
+        }
+      }
+    }
+  }
+}

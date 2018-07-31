@@ -1,0 +1,88 @@
+{
+  "theme": {
+    "img": {
+      "path": "./src/assets/img"
+    },
+    "js": {
+      "path": "./src/assets/js",
+      "files": [
+        "./node_modules/jquery/dist/jquery.js",
+        "./node_modules/bootstrap/dist/js/bootstrap.js",
+        "./node_modules/jquery-lazy/jquery.lazy.js",
+        "./src/assets/js/fancybox.js",
+        "./src/assets/js/visible.js",
+        "./src/assets/js/scripts.js"
+      ]
+    },
+    "scss": {
+      "path": "./src/assets/scss",
+      "files": [
+        "./src/assets/scss/obtera.scss",
+        "./src/assets/scss/comments.scss",
+        "./src/assets/scss/default.scss",
+        "./src/assets/scss/page.scss",
+        "./src/assets/scss/single.scss"
+      ]
+    }
+  },
+  "dist": {
+    "root": {
+      "files": [
+        "./*.php",
+        "./*.jpg",
+        "./*.css"
+      ],
+      "path": "./obtera/"
+    },
+    "components": {
+      "files": [
+        "./src/components/*.php"
+      ],
+      "path": "./obtera/src/components/"
+    },
+    "functions": {
+      "files": [
+        "./src/functions/*.php"
+      ],
+      "path": "./obtera/src/functions/"
+    },
+    "images": {
+      "files": [
+        "./src/assets/img/*.jpg"
+      ],
+      "path": "./obtera/src/assets/img/"
+    },
+    "icons": {
+      "files": [
+        "./src/assets/img/icons/*.*"
+      ],
+      "path": "./obtera/src/assets/img/icons/"
+    },
+    "scripts": {
+      "files": [
+        "./src/assets/js./obtera.js"
+      ],
+      "path": "./obtera/src/assets/js/"
+    },
+    "styles": {
+      "files": [
+        "./src/assets/scss/*.css"
+      ],
+      "path": "./obtera/src/assets/scss/"
+    }
+  },
+  "mamp": {
+    "path": "/Applications/MAMP/htdocs",
+    "wordPress": "",
+    "wordPressThemes": "/wp-content/themes",
+    "themeName": "/obtera",
+    "domain" : "localhost",
+    "port" : 8888
+  },
+  "dependencies": {
+    "browseSync" : {
+      "port": 8787,
+      "uiPort": 8989
+    }
+  }
+}

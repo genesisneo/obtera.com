@@ -1,115 +1,44 @@
-
 <?php get_header(); ?>
 
-<?php if (get_search_query() == '' || get_search_query() == null) : ?>
+<div class="container my-3 archive">
 
-    <?php // Query is equal to null or empty ?>
+  <div class="row">
+    
+    <?php
+      if (have_posts()) :
+        $postCount = 0;
+        ?>
+          <section class="col-12 mb-3 px-2 item">
+            <h4>
+              <span class="font-weight-normal">Results for:</span>
+              <?php echo esc_html(get_search_query(false)); ?>
+            </h4>
+          </section>
+        <?php
+        while (have_posts()) : the_post();
+          if ($postCount === 6) {
+            echo google_adsense_ads();
+          }
+          get_template_part('/src/components/content', 'cards');
+          $postCount++;
+        endwhile;
+        ?>
+  </div>
+  <div class="row justify-content-center">
+        <?php
+          next_posts_link('Older posts');
+          previous_posts_link('Newer posts');
+      else:
+        get_template_part('/src/components/content', 'none');
+      endif;
+    ?>
+    
+  </div>
 
-<?php else : ?>
+</div>
 
-    <?php // List of Posts ?>
-    <?php if (have_posts()) : ?>
-
-    <!-- Posts -->
-    <section id="posts">
-
-        <div class="row">
-
-            <div class="column small-12 medium-12 large-12">
-
-                <?php // Display query value ?>
-                <h3>Search results for: <?php echo esc_html(get_search_query(false)); ?></h3>
-
-            </div>
-
-        </div>
-
-        <div class="row small-uncollapse medium-uncollapse large-uncollapse">
-
-            <div class="column small-12 medium-12 large-12">
-
-                <div class="small-block-grid-1 medium-block-grid-2">
-
-                    <?php // Show all posts ?>
-                    <?php while (have_posts()) : the_post(); ?>
-
-                    <!-- Post -->
-                    <article class="item">
-                        <?php // Post class ?>
-                        <div <?php post_class(); ?>>
-                            <a href="<?php the_permalink(); ?>" class="post-details">
-                                <?php // Feature image ?>
-                                <?php
-                                    if ( has_post_thumbnail() ) {
-                                        the_post_thumbnail();
-                                    } else { ?>
-                                        <img src="<?php bloginfo('template_url'); ?>/assets/img/thumbnail.jpg" class="wp-post-image">
-                                    <?php
-                                    }
-                                ?>
-                                <header class="details">
-                                    <h3><?php echo wp_trim_words( get_the_title(),10); ?></h3>
-                                    <span><i></i> <?php the_author(); ?> / <?php the_time('m-d-Y'); ?></span>
-                                </header>
-                            </a>
-                            <?php // Post content ?>
-                            <?php // the_content('...') or the_excerpt() ?>
-                            <?php the_excerpt(); ?>
-                            <div class="at-above-post-page"></div>
-                            <p class="categories">Categories: <?php the_category(' / '); ?></p>
-                        </div>
-                    </article>
-
-                    <?php endwhile; ?>
-
-                </div>
-
-            </div>
-
-        </div>
-
-        <div class="row">
-
-            <div id="post-paginations" class="columns">
-                <?php next_posts_link('Older posts'); ?>
-                <?php previous_posts_link('Newer posts'); ?>
-            </div>
-
-        </div>
-
-    </section>
-
-    <?php else : ?>
-
-    <!-- Posts -->
-    <section id="posts">
-
-        <div class="row">
-
-            <div class="column small-12 medium-12 large-12">
-
-                <h3>Nothing found</h3>
-
-            </div>
-
-        </div>
-
-        <div class="row">
-
-            <div class="column small-12 medium-12 large-12">
-
-                <p>Sorry, but nothing matched your search terms. Please try again with some different keywords.</p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <?php endif; ?>
-
-<?php endif; ?>
-
-<?php wp_reset_query(); ?>
+<style type="text/css">
+  <?php include(get_template_directory() . '/src/assets/scss/default.css'); ?>
+</style>
 
 <?php get_footer(); ?>

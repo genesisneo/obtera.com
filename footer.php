@@ -1,47 +1,36 @@
+      <footer class="pb-3">
 
-<!-- Footer -->
-<footer id="footer">
+        <div class="container py-3">
 
-    <div class="row">
+          <section class="row">
 
-        <div class="columns small-12 medium-4">
-            <h3 id="search">Search</h3>
-            <form id="search-form" class="search-form" role="search" method="get" action="<?php echo esc_url(home_url('/')); ?>">
-                <input type="text" id="search-input" name="s" placeholder="Search..." value="" />
-                <input type="submit" id="search-submit" value="" />
-            </form>
-            <h3 id="followus">Follow us</h3>
-            <ul class="footer-social-networks">
-                <li><a href="http://facebook.com/obteracom"><span class="facebook"></span>facebook.com/obteracom</a></li>
-                <li><a href="http://twitter.com/obteracom"><span class="twitter"></span>twitter.com/obteracom</a></li>
-                <li><a href="http://plus.google.com/+Obteracom"><span class="googleplus"></span>plus.google.com/+obteracom</a></li>
-                <li><a href="http://youtube.com/obteracom"><span class="youtube"></span>youtube.com/obteracom</a></li>
-                <li><a href="http://feeds.feedburner.com/obteracom"><span class="rss"></span>feeds.feedburner.com/obteracom</a></li>
-            </ul>
+            <?php get_template_part('/src/components/footer', 'info'); ?>
+
+            <?php get_template_part('/src/components/footer', 'popular-posts'); ?>
+
+            <?php get_template_part('/src/components/footer', 'popular-categories'); ?>
+
+          </section>
+
+          <hr>
+
+          <div class="row">
+            <aside class="col-12 mb-3 pb-3 text-center text-md-left copyright">
+              <small>Copyright &copy; <?php echo date("Y"); ?>. Obtera.com. All rights reserved.</small>
+            </aside>
+          </div>
+
         </div>
 
-        <div class="columns small-12 medium-8">
-            <?php
-                if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Footer") ) : endif;
-            ?>
-        </div>
+      </footer>
 
     </div>
 
-    <div class="row">
+  <?php wp_footer(); ?>
+  
+  <!-- AddThis Analytics -->
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-562f202ecd1822ce" async="async"></script>
 
-        <div class="columns">
-            <p class="copyrights">
-                2017 &copy; All rights reserved | obtera.com
-            </p>
-        </div>
-
-    </div>
-
-
-</footer>
-
-<!-- WordPress Scripts -->
-<?php wp_footer(); ?>
-
-</body></html>
+  </body>
+  
+</html>

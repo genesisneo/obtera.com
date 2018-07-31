@@ -1,0 +1,17 @@
+.alignleft {
+  float: left;
+  margin:0 1rem 1rem 0;
+}
+.aligncenter {
+  display: block;
+  margin: 0 auto 1rem;
+}
+.alignright {
+  float: right;
+  margin:0 0 1rem 1rem;
+}
+.alignnone {
+  float: none;
+  display:block;
+  margin:0 0 1rem;
+}

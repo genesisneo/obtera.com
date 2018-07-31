@@ -1,0 +1,37 @@
+header {
+  backdrop-filter: blur(1rem);
+  background-color: rgba(255,255,255,.88);
+  transition: box-shadow .25s linear;
+  transform: translate3d(0,0,0);
+  nav {
+    .navbar-brand {
+      line-height: 2rem;
+      .header-logo {
+        width: auto;
+        height: 2rem;
+      }
+    }
+    #navbarSupportedContent {
+      .navbar-nav {
+        .menu-item {
+          .dropdown-toggle {
+            &:after {
+              margin-left: .5rem;
+              vertical-align: middle;
+              border-top: .25em solid;
+              border-left: .25em solid transparent;
+              border-right: .25em solid transparent;
+            }
+          }
+          .dropdown-menu {
+            -webkit-backdrop-filter: blur(1rem);
+            backdrop-filter: blur(1rem);
+            background-color: rgba(255,255,255,0.88);
+            font-size: inherit;
+            font-weight: inherit;
+          }
+        }
+      }
+    }
+  }
+}

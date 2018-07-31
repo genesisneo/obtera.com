@@ -1,3 +1,13 @@
-*.DS_Store
-*.db
-desktop.ini
+# Defaults
+logs
+*.log
+npm-debug.log*
+build/Release
+node_modules
+.npm
+**/.DS_Store
+**/desktop.ini
+**/thumbs.db
+
+# Compiled
+obtera/

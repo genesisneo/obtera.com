@@ -1,67 +1,29 @@
-
 <?php get_header(); ?>
 
-<?php // List of Posts ?>
-<?php if (have_posts()) : ?>
+<div class="single">
 
-    <?php // Show all posts ?>
-    <?php while (have_posts()) : the_post(); ?>
+  <div class="row">
 
-        <!-- Posts -->
-        <section id="posts" class="single format-<?php echo(get_post_format()) ?>">
+    <?php
+      if (have_posts()) :
+        while (have_posts()) : the_post();
+          if (!is_attachment()) {
+            get_template_part('/src/components/content', 'single');
+          } else {
+            get_template_part('/src/components/content', 'attachment');
+          }
+        endwhile;
+      else:
+        get_template_part('/src/components/content', 'none');
+      endif;
+    ?>
 
-            <?php
-                if ( has_post_thumbnail( $post -> ID ) ) {
-                    $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post -> ID ), 'single-post-thumbnail' );
-                    $image = $image[0];
-                } else {
-                    $image = get_bloginfo('stylesheet_directory') . '/assets/img/thumbnail.jpg';
-                }
-            ?>
+  </div>
 
-            <div class="post-details" style="background-image: url('<?php echo $image; ?>');">
-                <header class="details">
-                    <h3><?php the_title(); ?></h3>
-                    <span><i></i> <?php the_author_posts_link() ?> / <?php the_time('m-d-Y'); ?> / <a href="<?php comments_link(); ?>"><?php comments_number('No comments', '1 comment', '% comments'); ?></a></span>
-                    <div class="at-above-post-page" style="margin-top:0.313em;"></div>
-                </header>
-            </div>
+</div>
 
-            <div class="row small-uncollapse medium-uncollapse large-uncollapse">
-
-                <div class="column small-12 medium-12 large-12">
-
-                    <div class="small-block-grid-1">
-
-                        <!-- Post -->
-                        <article class="item">
-                            <?php // Post class ?>
-                            <div <?php post_class(); ?>>
-                                <?php // Attachement ?>
-                                <?php if ( is_attachment() ) { ?>
-                                    <p id="back"><a href="javascript:history.back()">Go back</a></p>
-                                <?php } ?>
-                                <?php // Post content ?>
-                                <?php the_content('...'); ?>
-                                <p class="categories">Categories: <?php the_category(' / '); ?></p>
-                                <p class="tags"><?php the_tags('Tags: ', ' / ', ''); ?></p>
-                                <?php // Comments Template ?>
-                                <?php comments_template(); ?>
-                            </div>
-                        </article>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-    <?php endwhile; ?>
-
-<?php endif; ?>
-
-<?php wp_reset_query(); ?>
+<style type="text/css">
+  <?php include(get_template_directory() . '/src/assets/scss/single.css'); ?>
+</style>
 
 <?php get_footer(); ?>

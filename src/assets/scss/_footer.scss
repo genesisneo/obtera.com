@@ -1,0 +1,96 @@
+footer {
+  position: relative;
+  background-color: var(--light);
+  z-index: 2;
+  .container {
+    .row {
+      ul {
+        li {
+          a {
+            padding: 0;
+          }
+        }
+      }
+      .footer-info {
+        .footer-logo {
+          width: auto;
+          height: 4rem;
+        }
+        .site-summary {
+          &.widget {
+            display: none;
+            &.widget_text {
+              display: block;
+              & ~ .site-summary.widget.widget_text {
+                display: none;
+              }
+            }
+          }
+        }
+        .social-links {
+          ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            li {
+              display: inline-block;
+              a {
+                display: inline-block;
+                margin: 0 .5rem .5rem 0;
+                width: 2.5rem;
+                height: 2.5rem;
+                background-color: var(--secondary-text-color);
+                border-radius: 2.5rem;
+                color: var(--white);
+                text-align: center;
+                &:hover {
+                  background-color: var(--primary-text-color);
+                }
+                .icon {
+                  position: relative;
+                  display: inline-block;
+                  top: .75rem;
+                  fill: currentColor;
+                  width: 1rem;
+                  height: 1rem;
+                  vertical-align: top;
+                }
+              }
+            }
+          }
+        }
+      }
+      .footer-popular-posts {
+        a {
+          color: var(--primary-text-color);
+          &.media {
+            img {
+              width: 6.25rem;
+              height: 4rem;
+            }
+          }
+        }
+      }
+      .footer-popular-categories {
+        ul {
+          &.list-unstyled {
+            li {
+              &:last-child {
+                margin-bottom: 1rem !important;
+                border: none !important;
+              }
+              a {
+                color: var(--primary-text-color);
+              }
+            }
+          }
+        }
+      }
+      .copyright {
+        small {
+          color: var(--secondary-text-color);
+        }
+      }
+    }
+  }
+}
