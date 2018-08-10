@@ -26,22 +26,6 @@ $(function() {
     }
   });
 
-  // item listener
-  var win = $('.obtera');
-  var allMods = $(".item");
-  allMods.each(function(i, el) {
-    var el = $(el);
-    if (el.visible(true))
-      el.addClass("slide visible");
-  });
-  win.scroll(function(event) {
-    allMods.each(function(i, el) {
-      var el = $(el);
-      if (el.visible(true))
-        el.addClass("slide");
-    });
-  });
-
   // search validation
   $('.search-form .btn').click(function() {
     if ($('.search-input').val() === '') {

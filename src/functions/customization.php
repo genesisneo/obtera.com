@@ -132,9 +132,14 @@
     font-display: swap;
   }
   html, body {
+    position: fixed;
+    display: block;
     margin: 0;
     padding: 0;
+    width: 100vw;
+    height: 100vh;
     background: #343a40;
+    overflow: hidden;
   }
   .obtera {
     position: relative;
@@ -144,27 +149,11 @@
     width: 100vw;
     height: 100vh;
     background-color: #fff;
-    color: var(--primary-text-color);
+    color: #212121;
     overflow-x: hidden;
-    overflow-y: scroll;
+    overflow-y: auto;
     -webkit-overflow-scrolling: touch;
     overflow-scrolling: touch;
-    -webkit-perspective: 1px;
-    perspective: 1px;
-  }
-  body.admin-bar .obtera {
-    height: calc(100vh - 32px);
-  }
-  body.admin-bar .fancybox-container {
-    top: 32px;
-  }
-  @media screen and (max-width: 782px) {
-    body.admin-bar .obtera {
-      height: calc(100vh - 46px);
-    }
-    body.admin-bar .fancybox-container {
-      top: 46px;
-    }
   }
   .obtera.show-splash {
     overflow: hidden;
@@ -199,6 +188,28 @@
   @keyframes rotate {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+  }
+  body.admin-bar .obtera {
+    top: 32px;
+    height: calc(100vh - 32px);
+  }
+  body.admin-bar.fancybox-active .obtera {
+    height: 100vh;
+  }
+  body.admin-bar.fancybox-active .fancybox-container {
+    top: 32px;
+  }
+  @media screen and (max-width: 782px) {
+    body.admin-bar .obtera {
+      top: 46px;
+      height: calc(100vh - 46px);
+    }
+    body.admin-bar.fancybox-active .obtera {
+      height: 100vh;
+    }
+    body.admin-bar.fancybox-active .fancybox-container {
+      top: 46px;
+    }
   }
 </style>
 <link href="https://fonts.googleapis.com/css?family=Hind+Siliguri|Open+Sans" rel="stylesheet">

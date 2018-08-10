@@ -61,4 +61,24 @@
   <?php include(get_template_directory() . '/src/assets/scss/default.css'); ?>
 </style>
 
+<script type="text/javascript">
+  document.addEventListener('DOMContentLoaded', function() {
+    // item listener
+    var win = $('.obtera');
+    var allMods = $(".item");
+    allMods.each(function(i, el) {
+      var el = $(el);
+      if (el.visible(true))
+        el.addClass("slide visible");
+    });
+    win.scroll(function(event) {
+      allMods.each(function(i, el) {
+        var el = $(el);
+        if (el.visible(true))
+          el.addClass("slide");
+      });
+    });
+  });
+</script>
+
 <?php get_footer(); ?>

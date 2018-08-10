@@ -1,6 +1,7 @@
 footer {
   position: relative;
   background-color: var(--light);
+  transform: translate3d(0,0,0);
   z-index: 2;
   .container {
     .row {

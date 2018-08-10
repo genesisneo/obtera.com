@@ -44,14 +44,14 @@ body.compensate-for-scrollbar {
   overflow-y: auto; }
 
 .fancybox-bg {
-  background: #1e1e1e;
-  opacity: 0;
+  backdrop-filter: blur(1rem);
+  background: rgba(30,30,30,0);
   transition-duration: inherit;
-  transition-property: opacity;
+  transition-property: background-color;
   transition-timing-function: cubic-bezier(0.47, 0, 0.74, 0.71); }
 
 .fancybox-is-open .fancybox-bg {
-  opacity: .87;
+  background: rgba(30,30,30,.88);
   transition-timing-function: cubic-bezier(0.22, 0.61, 0.36, 1); }
 
 .fancybox-infobar,

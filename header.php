@@ -12,7 +12,7 @@
       <img
         src="<?php echo(get_header_image()); ?>"
         alt="<?php bloginfo('name'); ?>"
-        style="position:absolute;display:block;top:0;left:0;right:0;margin:0 auto;padding:0;width:100%;height:1px;" />
+        style="position:absolute;display:block;top:0;left:0;right:0;margin:0 auto;padding:0;width:100vw;height:1px;" />
     <?php } ?>
 
     <div class="obtera show-splash">

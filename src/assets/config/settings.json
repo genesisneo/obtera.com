@@ -9,6 +9,7 @@
         "./node_modules/jquery/dist/jquery.js",
         "./node_modules/bootstrap/dist/js/bootstrap.js",
         "./node_modules/jquery-lazy/jquery.lazy.js",
+        "./src/assets/js/parallax.js",
         "./src/assets/js/fancybox.js",
         "./src/assets/js/visible.js",
         "./src/assets/js/scripts.js"
