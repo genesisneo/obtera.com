@@ -118,6 +118,20 @@
         )
       )
     );
+    $wp_customize->add_setting(
+      'addthis_id', array(
+        'default' => 'ra-562f202ecd1822ce',
+      )
+    );
+    $wp_customize->add_control(
+      new WP_Customize_Control(
+        $wp_customize, 'addthis_id', array(
+          'label' => __('AddThis Profile ID', 'obtera'),
+          'description' => __('The unique ID that allows AddThis to know which website’s metrics should be reported. More info <a href="http://www.addthis.com/academy/using-profiles-in-your-addthis-account/" target="_blank">here</a>.'),
+          'section' => 'obtera_section',
+        )
+      )
+    );
   }
   add_action('customize_register', 'obtera_theme_customization');
 

@@ -48,4 +48,10 @@
   <?php }
   add_action('wp_footer', 'google_analytics');
 
+  // AddThis Analytics
+  function addthis_analytics() { ?>
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=<?php echo get_theme_mod('addthis_id', 'ra-562f202ecd1822ce'); ?>" async="async"></script>
+  <?php }
+  add_action('wp_footer', 'addthis_analytics');
+
 ?>

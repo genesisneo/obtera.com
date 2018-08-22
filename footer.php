@@ -27,9 +27,6 @@
     </div>
 
   <?php wp_footer(); ?>
-  
-  <!-- AddThis Analytics -->
-  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-562f202ecd1822ce" async="async"></script>
 
   </body>
   
