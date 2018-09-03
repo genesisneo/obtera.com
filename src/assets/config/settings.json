@@ -64,7 +64,7 @@
     },
     "scripts": {
       "files": [
-        "./src/assets/js./obtera.js"
+        "./src/assets/js/obtera.js"
       ],
       "path": "./obtera/src/assets/js/"
     },
