@@ -33,7 +33,7 @@
 
 .obtera {
   -webkit-font-smoothing: antialiased;
-  font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   font-family: 'Open Sans','Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;
   ::-webkit-input-placeholder {
     color: rgba(0,0,0,.16);
