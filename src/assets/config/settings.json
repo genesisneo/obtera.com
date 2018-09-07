@@ -52,7 +52,8 @@
     },
     "images": {
       "files": [
-        "./src/assets/img/*.jpg"
+        "./src/assets/img/*.jpg",
+        "./src/assets/img/*.png"
       ],
       "path": "./obtera/src/assets/img/"
     },
