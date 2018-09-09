@@ -10,8 +10,13 @@
     add_theme_support('title-tag');
     // Enable support for post thumbnails on posts and pages
     add_theme_support('post-thumbnails');
-    add_image_size('obtera-featured-image', 1280, 720, true);
-    add_image_size('obtera-thumbnail-avatar', 128, 128, true);
+    // Update default image size
+    update_option('thumbnail_size_w', 128);
+    update_option('thumbnail_size_h', 128);
+    update_option('medium_size_w', 480);
+    update_option('medium_size_h', 270);
+    update_option('large_size_w', 960);
+    update_option('large_size_h', 540);
     // Add theme support for selective refresh for widgets
     add_theme_support('customize-selective-refresh-widgets');
     // Register menus

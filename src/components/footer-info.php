@@ -3,7 +3,7 @@
                 <?php
                   if (has_custom_logo()) {
                     $custom_logo_id = get_theme_mod('custom_logo');
-                    $custom_logo_image = wp_get_attachment_image_src($custom_logo_id, 'full');
+                    $custom_logo_image = wp_get_attachment_image_src($custom_logo_id, 'thumbnail');
                     if ($custom_logo_image[0]) {
                       ?>
                       <img class="lazy mr-3 footer-logo" alt="<?php bloginfo('name'); ?>" data-src="<?php echo $custom_logo_image[0] ?>">

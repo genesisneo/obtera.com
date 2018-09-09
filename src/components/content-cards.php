@@ -1,6 +1,7 @@
         <article class="col-12 col-md-6 col-xl-4 mb-3 px-2 item">
           <?php
             if (has_post_thumbnail($post->ID)) {
+              /* thumbnail | medium | medium_large | large | full */
               $image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'medium_large');
               $image = $image[0];
             } else {
