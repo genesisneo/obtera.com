@@ -1,5 +1,14 @@
 $(window).on("load", function() {
 
+  // remove domain name in all links
+  $('a').each(function(index) {
+    var path = this.getAttribute('href'), newPath;
+    if (path !== null) {
+      newPath = path.replace(window.location.origin, '');
+      this.setAttribute('href', newPath);
+    }
+  });
+
   // remove splash if the page is fully loaded
   $('.obtera .splash').fadeOut(500, function() {
     $('.obtera').removeClass('show-splash');
@@ -29,7 +38,16 @@ $(function() {
   // search validation
   $('.search-form .btn').click(function() {
     if ($('.search-input').val() === '') {
+      $('.search-input').focus();
       return false;
+    } else {
+      if (gtag) {
+        gtag('event', 'search', {
+          'event_category': 'search',
+          'event_label': 'search',
+          'value': $('.search-input').val()
+        });
+      }
     }
   });
 
@@ -69,5 +87,20 @@ $(function() {
       });
     });
   }
+
+  // send event to google analytics if link have data-action
+  $('.post-content a[data-action]').on('click', function() {
+    if (gtag) {
+      var dataAction = this.getAttribute('data-action');
+      var dataCategory = this.getAttribute('data-category');
+      var dataLabel = this.getAttribute('data-label');
+      var dataValue = this.getAttribute('href');
+      gtag('event', dataAction, {
+        'event_category': dataCategory,
+        'event_label': dataLabel,
+        'value': dataValue
+      });
+    }
+  });
 
 });
