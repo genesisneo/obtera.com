@@ -12,7 +12,7 @@
                 );
                 while ($popular->have_posts()) : $popular->the_post();
               ?>
-                <a class="media" href="<?php the_permalink(); ?>">
+                <a class="media mb-3" href="<?php the_permalink(); ?>">
                   <?php
                     if (has_post_thumbnail($post->ID)) {
                       $image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'thumbnail');
@@ -21,8 +21,8 @@
                       $image = get_bloginfo('stylesheet_directory') . '/src/assets/img/image-thumbnail.jpg';
                     }
                   ?>
-                  <img class="lazy mr-3 mb-3" alt="<?php the_title(); ?>" data-src="<?php echo $image; ?>">
-                  <div class="media-body">
+                  <img class="lazy mr-3" alt="<?php the_title(); ?>" data-src="<?php echo $image; ?>">
+                  <div class="media-body align-self-center">
                     <small class="d-block text-muted"><?php the_time('M d, Y'); ?></small>
                     <h6 class="m-0"><?php the_title(); ?></h6>
                   </div>
