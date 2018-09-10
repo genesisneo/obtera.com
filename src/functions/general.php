@@ -11,8 +11,8 @@
     // Enable support for post thumbnails on posts and pages
     add_theme_support('post-thumbnails');
     // Update default image size
-    update_option('thumbnail_size_w', 128);
-    update_option('thumbnail_size_h', 128);
+    update_option('thumbnail_size_w', 240);
+    update_option('thumbnail_size_h', 135);
     update_option('medium_size_w', 480);
     update_option('medium_size_h', 270);
     update_option('large_size_w', 960);
