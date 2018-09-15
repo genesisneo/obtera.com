@@ -2,8 +2,10 @@ $(window).on("load", function() {
 
   // remove domain name in all links
   $('a').each(function(index) {
-    var path = this.getAttribute('href'), newPath;
-    if (path !== null) {
+    var path = this.getAttribute('href'),
+      expression = new RegExp("^https?://" + window.location.hostname, 'i'),
+      newPath;
+    if (path !== null && expression.test(path)) {
       newPath = path.replace(window.location.origin, '');
       this.setAttribute('href', newPath);
     }

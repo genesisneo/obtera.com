@@ -10,28 +10,28 @@
         if (is_author()) {
           ?>
             <section class="col-12 mb-3 px-2 item">
-              <h4>
-                <span class="font-weight-normal">Author:</span>
+              <h5>
+                <small class="text-muted">Author:</small>
                 <?php the_author(); ?>
-              </h4>
+              </h5>
             </section>
           <?php
         } elseif (is_tag()) {
           ?>
             <section class="col-12 mb-3 px-2 item">
-              <h4>
-                <span class="font-weight-normal">Tag:</span>
+              <h5>
+                <small class="text-muted">Tag:</small>
                 <?php single_tag_title(); ?>
-              </h4>
+              </h5>
             </section>
           <?php
         } else {
           ?>
             <section class="col-12 mb-3 px-2 item">
-              <h4>
-                <span class="font-weight-normal">Category:</span>
+              <h5>
+                <small class="text-muted">Category:</small>
                 <?php single_cat_title(); ?>
-              </h4>
+              </h5>
             </section>
           <?php
         }

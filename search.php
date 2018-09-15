@@ -9,10 +9,10 @@
         $postCount = 0;
         ?>
           <section class="col-12 mb-3 px-2 item">
-            <h4>
-              <span class="font-weight-normal">Results for:</span>
+            <h5>
+              <small class="text-muted">Results for:</small>
               <?php echo esc_html(get_search_query(false)); ?>
-            </h4>
+            </h5>
           </section>
         <?php
         while (have_posts()) : the_post();
