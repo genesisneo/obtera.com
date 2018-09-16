@@ -9,7 +9,7 @@
 <section class="lazy parallax" parallax="0.5" data-src="<?php echo $image; ?>"></section>
 
 <section class="col-12 py-3 text-center the-title">
-  <h2 class="py-3"><?php the_title(); ?></h2>
+  <h3 class="mb-0 py-3"><?php the_title(); ?></h3>
 </section>
 
 <section class="col-12 the-content">
@@ -25,7 +25,7 @@
           </a>
           <p class="text-muted">
             <?php
-              if (!empty(the_author_meta('description'))) {
+              if (get_the_author_meta('description') !== '') {
                 the_author_meta('description');
               } else {
                 echo 'Author biographical information.';
