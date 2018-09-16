@@ -1,21 +1,21 @@
 $(window).on("load", function() {
 
   // remove domain name in all links
-  $('a').each(function(index) {
-    var path = this.getAttribute('href'),
-      expression = new RegExp("^https?://" + window.location.hostname, 'i'),
-      newPath;
+  for (var i=0; i<$('a').length; i++) {
+    var path = $('a')[i].getAttribute('href'),
+        expression = new RegExp("^https?://" + window.location.hostname, 'i'),
+        newPath;
     if (path !== null && expression.test(path)) {
       newPath = path.replace(window.location.origin, '');
-      this.setAttribute('href', newPath);
+      $('a')[i].setAttribute('href', newPath);
     }
-  });
+  }
 
   // remove splash if the page is fully loaded
   $('.obtera .splash').fadeOut(500, function() {
     $('.obtera').removeClass('show-splash');
   });
-  
+
 });
 
 $(function() {
