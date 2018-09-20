@@ -9,7 +9,7 @@
           if (is_home() && current_user_can('publish_posts')) :
             printf('<p>Ready to publish your first post?<br><a href="%1$s">Get started here</a>.</p>', esc_url(admin_url('post-new.php')));
           else:
-            printf('<p>It seems we can&rsquo;t find what you&rsquo;re looking for.<br>Perhaps searching can help.</p>');
+            printf('<p>It seems we can&rsquo;t find what you&rsquo;re looking for.<br class="d-none d-sm-block"> Perhaps searching can help.</p>');
             ?>
             <form class="form-inline mb-3 search-form" role="search" method="get" action="<?php echo esc_url(home_url('/')); ?>">
               <div class="input-group mx-auto">

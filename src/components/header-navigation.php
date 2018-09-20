@@ -1,6 +1,6 @@
       <header class="sticky-top">
 
-        <nav class="container navbar navbar-expand-lg navbar-light">
+        <nav class="navbar navbar-expand-lg navbar-light">
 
           <a class="navbar-brand" href="<?php echo esc_url(home_url('/')); ?>">
             <?php

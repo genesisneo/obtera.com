@@ -1,57 +1,4 @@
-$(window).on("load", function() {
-
-  // remove domain name in all links
-  for (var i=0; i<$('a').length; i++) {
-    var path = $('a')[i].getAttribute('href'),
-        expression = new RegExp("^https?://" + window.location.hostname, 'i'),
-        newPath;
-    if (path !== null && expression.test(path)) {
-      newPath = path.replace(window.location.origin, '');
-      $('a')[i].setAttribute('href', newPath);
-    }
-  }
-
-  // remove splash if the page is fully loaded
-  $('.obtera .splash').fadeOut(500, function() {
-    $('.obtera').removeClass('show-splash');
-  });
-
-});
-
-$(function() {
-
-  // activate lazy loading
-  $('.obtera .lazy').lazy({
-    appendScroll: $('.obtera'),
-    effect: 'fadeIn',
-    threshold: 250,
-    visibleOnly: true
-  });
-
-  // add shadow class on header once srolled
-  $('.obtera').scroll(function() {
-    if ($(this).scrollTop() > 1) {
-      $('header').addClass('shadow');
-    } else {
-      $('header').removeClass('shadow');
-    }
-  });
-
-  // search validation
-  $('.search-form .btn').click(function() {
-    if ($('.search-input').val() === '') {
-      $('.search-input').focus();
-      return false;
-    } else {
-      if (gtag) {
-        gtag('event', 'search', {
-          'event_category': 'search',
-          'event_label': 'search',
-          'value': $('.search-input').val()
-        });
-      }
-    }
-  });
+window.onload = function() {
 
   // auto enable fancybox if href is image
   $('.post-content a[href$=".jpg"],' +
@@ -90,6 +37,43 @@ $(function() {
     });
   }
 
+  // remove domain name in all links
+  for (var i=0; i<$('a').length; i++) {
+    var $this = $('a')[i],
+        path = $this.getAttribute('href'),
+        expression = new RegExp("^https?://" + window.location.hostname, 'i'),
+        newPath;
+    if (path !== null && expression.test(path)) {
+      newPath = path.replace(window.location.origin, '');
+      $this.setAttribute('href', newPath);
+    }
+    if (($this.parentNode.parentNode.className.split(' ').indexOf('social-links-menu') >= 0)) {
+      $this.setAttribute('target', '_blank');
+    }
+  }
+
+  // activate lazy loading
+  $('.obtera .lazy').lazy({
+    appendScroll: $('.obtera'),
+    effect: 'fadeIn',
+    threshold: 250,
+    visibleOnly: true
+  });
+
+  // add shadow class on header once srolled
+  $('.obtera').scroll(function() {
+    if ($(this).scrollTop() > 1) {
+      $('header').addClass('shadow');
+    } else {
+      $('header').removeClass('shadow');
+    }
+  });
+
+  // remove splash if the page is fully loaded
+  $('.obtera .splash').fadeOut(500, function() {
+    $('.obtera').removeClass('show-splash');
+  });
+
   // send event to google analytics if link have data-action
   $('.post-content a[data-action]').on('click', function() {
     if (gtag) {
@@ -105,4 +89,20 @@ $(function() {
     }
   });
 
-});
+  // search validation
+  $('.search-form .btn').click(function() {
+    if ($('.search-input').val() === '') {
+      $('.search-input').focus();
+      return false;
+    } else {
+      if (gtag) {
+        gtag('event', 'search', {
+          'event_category': 'search',
+          'event_label': 'search',
+          'value': $('.search-input').val()
+        });
+      }
+    }
+  });
+
+};
