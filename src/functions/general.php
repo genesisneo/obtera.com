@@ -176,4 +176,22 @@
     remove_action('wp_head', '_admin_bar_bump_cb');
   });
 
+  // Add custom attributes to social links menu for analytics
+  add_filter('nav_menu_link_attributes', function($atts, $item, $args) {
+    if($args->theme_location == 'main') {
+      $atts['data-action'] = 'Redirect';
+      $atts['data-category'] = 'Main Navigation';
+      $atts['data-label'] = $item->title;
+      $atts['data-value'] = $item->url;
+    }
+    if($args->theme_location == 'social') {
+      $atts['target'] = '_blank';
+      $atts['data-action'] = 'Redirect';
+      $atts['data-category'] = 'Social Links';
+      $atts['data-label'] = $item->title;
+      $atts['data-value'] = $item->url;
+    }
+    return $atts;
+  }, 10, 3);
+
 ?>

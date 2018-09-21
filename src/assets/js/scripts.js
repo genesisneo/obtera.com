@@ -38,17 +38,17 @@ window.onload = function() {
   }
 
   // remove domain name in all links
-  for (var i=0; i<$('a').length; i++) {
-    var $this = $('a')[i],
+  for (var i=0; i<$('.obtera a').length; i++) {
+    var $this = $('.obtera a')[i],
         path = $this.getAttribute('href'),
         expression = new RegExp("^https?://" + window.location.hostname, 'i'),
         newPath;
     if (path !== null && expression.test(path)) {
       newPath = path.replace(window.location.origin, '');
       $this.setAttribute('href', newPath);
-    }
-    if (($this.parentNode.parentNode.className.split(' ').indexOf('social-links-menu') >= 0)) {
-      $this.setAttribute('target', '_blank');
+      if ($this.getAttribute('data-action')) {
+        $this.setAttribute('data-value', newPath);
+      }
     }
   }
 
@@ -96,9 +96,9 @@ window.onload = function() {
       return false;
     } else {
       if (gtag) {
-        gtag('event', 'search', {
-          'event_category': 'search',
-          'event_label': 'search',
+        gtag('event', 'Search', {
+          'event_category': 'Search',
+          'event_label': 'Search',
           'value': $('.search-input').val()
         });
       }
