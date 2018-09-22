@@ -17,7 +17,7 @@
   <div class="container py-3">
     <div class="row my-3">
 
-      <div class="col-12 col-lg-8 mx-auto mb-3 pb-3 post-content">
+      <div class="col-12 col-lg-9 mx-auto mb-3 pb-3 post-content">
         <?php the_content(); ?>
       </div>
 

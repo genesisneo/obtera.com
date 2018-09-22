@@ -17,7 +17,7 @@
   <div class="container py-3">
     <div class="row my-3">
 
-      <div class="col-12 col-lg-4 mb-3 pb-3 order-2 order-lg-1 post-details">
+      <div class="col-12 col-lg-3 mb-3 pb-3 order-2 order-lg-1 post-details">
         <hr class="d-lg-none">
         <div class="post-author">
           <a class="font-weight-bold" href="<?php echo get_author_posts_url(get_the_author_meta('id')); ?>" rel="author">
@@ -60,7 +60,7 @@
         <?php } ?>
       </div>
 
-      <div class="col-12 col-lg-8 mb-3 pb-3 order-1 order-lg-2 post-content">
+      <div class="col-12 col-lg-9 mb-3 pb-3 order-1 order-lg-2 post-content">
         <?php the_content(); ?>
       </div>
 
