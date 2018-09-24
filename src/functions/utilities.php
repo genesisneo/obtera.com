@@ -2,7 +2,7 @@
 
   // Types of ads as variable
   $adsDefault =
-    '<div class="col-12 mb-3 pb-3 text-center border-top border-bottom">' .
+    '<div class="col-12 mb-3 px-0 pb-3 text-center border-top border-bottom">' .
       '<p class="small text-muted my-3">' . __('ADVERTISEMENT') . '</p>' .
       '<style type="text/css">' .
         '.google-ads { display:inline-block;width:320px;height:100px; }' .
@@ -16,7 +16,7 @@
       '});</script>' .
     '</div>';
   $adsColored =
-    '<div class="col-12 mb-3 pb-3 text-center border-top border-bottom">' .
+    '<div class="col-12 mb-3 px-0 pb-3 text-center border-top border-bottom">' .
     '<p class="small text-muted my-3">' . __('ADVERTISEMENT') . '</p>' .
       '<style type="text/css">' .
         '.google-ads { display:inline-block;width:320px;height:100px; }' .

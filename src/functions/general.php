@@ -186,6 +186,7 @@
     }
     if($args->theme_location == 'social') {
       $atts['target'] = '_blank';
+      $atts['rel'] = 'noopener';
       $atts['data-action'] = 'Redirect';
       $atts['data-category'] = 'Social Links';
       $atts['data-label'] = $item->title;

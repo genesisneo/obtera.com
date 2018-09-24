@@ -91,6 +91,9 @@
     transform: translate3d(0,0,0);
     z-index: 2;
   }
+  .the-comments {
+    background-color: darken(#f8f9fa, 5%);
+  }
   .post-content,
   .post-comment {
     color: var(--secondary-text-color);

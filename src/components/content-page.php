@@ -8,11 +8,11 @@
 ?>
 <section class="lazy parallax" parallax="0.5" data-src="<?php echo $image; ?>"></section>
 
-<section class="col-12 py-3 text-center the-title">
+<section class="col-12 px-0 py-3 text-center the-title">
   <h3 class="mb-0 py-3"><?php the_title(); ?></h3>
 </section>
 
-<section class="col-12 the-content">
+<section class="col-12 px-0 the-content">
 
   <div class="container py-3">
     <div class="row my-3">
@@ -26,7 +26,7 @@
 
 </section>
 
-<section class="col-12 the-comments" id="comments">
+<section class="col-12 px-0 the-comments" id="comments">
 
   <div class="container py-3">
     <div class="row my-3">
