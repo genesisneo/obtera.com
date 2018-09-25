@@ -10,6 +10,8 @@
     add_theme_support('title-tag');
     // Enable support for post thumbnails on posts and pages
     add_theme_support('post-thumbnails');
+    // Add header logo size
+    add_image_size('obtera-logo', 64, 64, true);
     // Update default image size
     update_option('thumbnail_size_w', 128);
     update_option('thumbnail_size_h', 128);

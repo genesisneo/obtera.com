@@ -155,6 +155,19 @@
     background: #343a40;
     overflow: hidden;
   }
+  .header-image {
+    position:absolute;
+    display:block;
+    top: calc(-100vh + 1px);
+    left:0;
+    right:0;
+    margin:0 auto;
+    padding:0;
+    width:auto;
+    height:100vh;
+    opacity:0;
+    z-index:-9999;
+  }
   .obtera {
     position: relative;
     display: block;

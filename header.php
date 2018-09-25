@@ -9,10 +9,7 @@
   <body <?php body_class(); ?>>
 
     <?php if (is_home() && has_header_image()) { ?>
-      <img
-        src="<?php echo(get_header_image()); ?>"
-        alt="<?php bloginfo('name'); ?>"
-        style="position:absolute;display:block;top:-100vh;left:0;right:0;margin:0 auto;padding:0;width:auto;height:100vh;opacity:0;z-index:-9999;" />
+      <img class="lazy header-image" alt="<?php bloginfo('name'); ?>" data-src="<?php echo(get_header_image()); ?>">
     <?php } ?>
 
     <div class="obtera show-splash">
