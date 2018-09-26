@@ -239,7 +239,6 @@
     }
   }
 </style>
-<link href="https://fonts.googleapis.com/css?family=Hind+Siliguri|Open+Sans" rel="stylesheet">
   <?php }
   add_action('wp_head', 'obtera_custom_them_styles');
 

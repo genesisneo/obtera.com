@@ -1,5 +1,23 @@
 window.onload = function() {
 
+  // google webfonts
+  WebFontConfig = {
+    google: {
+      families: [
+        'Hind+Siliguri',
+        'Open+Sans'
+      ]
+    }
+  };
+  (function() {
+    var wf = document.createElement('script');
+    wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+    wf.type = 'text/javascript';
+    wf.async = 'true';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(wf, s);
+  })();
+
   // auto enable fancybox if href is image
   $('.post-content a[href$=".jpg"],' +
     '.post-content a[href$=".jpeg"],' +

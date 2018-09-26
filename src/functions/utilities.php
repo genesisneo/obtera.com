@@ -9,7 +9,7 @@
         '@media(min-width: 500px) { .google-ads { width:468px;height:60px; } }' .
         '@media(min-width: 800px) { .google-ads { width:728px;height:90px; } }' .
       '</style>' .
-      '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>' .
+      '<script type="text/javascript" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" async></script>' .
       '<ins class="adsbygoogle google-ads" data-ad-client="' . get_theme_mod('google_adsense', 'ca-pub-4543509049123673') . '" data-ad-slot="' . get_theme_mod('google_adsense_default', '3941328836') . '" data-ad-format="auto"></ins>' .
       '<script>(adsbygoogle = window.adsbygoogle || []).push({' .
         'google_ad_client: "' . get_theme_mod('google_adsense', 'ca-pub-4543509049123673') . '"' .
@@ -23,7 +23,7 @@
         '@media(min-width: 500px) { .google-ads { width:468px;height:60px; } }' .
         '@media(min-width: 800px) { .google-ads { width:728px;height:90px; } }' .
       '</style>' .
-      '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>' .
+      '<script type="text/javascript" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" async></script>' .
       '<ins class="adsbygoogle google-ads" data-ad-client="' . get_theme_mod('google_adsense', 'ca-pub-4543509049123673') . '" data-ad-slot="' . get_theme_mod('google_adsense_colored', '5500728600') . '" data-ad-format="auto"></ins>' .
       '<script>(adsbygoogle = window.adsbygoogle || []).push({' .
         'google_ad_client: "' . get_theme_mod('google_adsense', 'ca-pub-4543509049123673') . '"' .
@@ -38,7 +38,7 @@
 
   // Google Analytics
   function google_analytics() { ?>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=<?php echo get_theme_mod('google_analytics', 'UA-68704357-1'); ?>"></script>
+    <script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=<?php echo get_theme_mod('google_analytics', 'UA-68704357-1'); ?>" async></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() { dataLayer.push(arguments); }
@@ -50,7 +50,7 @@
 
   // AddThis Analytics
   function addthis_analytics() { ?>
-    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=<?php echo get_theme_mod('addthis_id', 'ra-562f202ecd1822ce'); ?>" async="async"></script>
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=<?php echo get_theme_mod('addthis_id', 'ra-562f202ecd1822ce'); ?>" async></script>
   <?php }
   add_action('wp_footer', 'addthis_analytics');
 

@@ -129,7 +129,7 @@
 
   // Add custom styles on header
   function obtera_custom_styles() { ?>
-    <link href="<?php echo get_theme_file_uri('/src/assets/scss/obtera.css'); ?>" rel="stylesheet">
+    <link rel="stylesheet" href="<?php echo get_theme_file_uri('/src/assets/scss/obtera.css'); ?>" media="none" onload="if(media!='all')media='all'">
   <?php }
   add_action('wp_head', 'obtera_custom_styles');
 
@@ -196,5 +196,15 @@
     }
     return $atts;
   }, 10, 3);
+
+  // Add none blocking to all stylesheets
+  add_filter('style_loader_tag', function($html, $handle, $href, $media) {
+    $medias = array('all', 'print', 'screen', 'speech');
+    if(in_array($media, $medias)) {
+      $html = str_replace($medias, 'none', $html);
+      $html = str_replace('>', ' onload="if(media!=' . "'all'" . ')media=' . "'all'" . '">', $html);
+    }
+    return $html;
+  }, 10, 4);
 
 ?>
