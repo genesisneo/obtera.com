@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui, viewport-fit=cover">
     <meta name="author" content="<?php bloginfo('name'); ?>">
     <meta name="description" content="<?php bloginfo('description'); ?>">
-    <meta name="keywords" content="<?php echo get_theme_mod('google_analytics', 'obtera, wordpress, theme, web, design, ui, ux, user, interface, experience'); ?>">
+    <meta name="keywords" content="<?php echo get_theme_mod('site_keyword', 'obtera, wordpress, theme, web, design, ui, ux, user, interface, experience'); ?>">
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <link rel="apple-touch-icon-precomposed" href="<?php bloginfo('template_url'); ?>/src/assets/img/icons/icon.png" />
