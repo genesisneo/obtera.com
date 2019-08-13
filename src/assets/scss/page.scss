@@ -1,18 +1,21 @@
 .content-page {
   position: relative;
+
   .parallax {
     position: relative;
     display: block;
-    margin: -16vh auto;
+    margin: -16vh auto -8vh;
     padding: 0;
     width: 100vw;
     height: 100vh;
     background-position: 50% 0;
     background-size: cover;
   }
+
   .the-title {
     background-color: var(--light);
   }
+
   .the-content {
     background-color: var(--white);
   }

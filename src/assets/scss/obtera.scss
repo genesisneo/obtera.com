@@ -3,7 +3,7 @@
 @import "./node_modules/bootstrap/scss/variables";
 @import "./node_modules/bootstrap/scss/mixins";
 
-// Obtera
+// Bootstrap
 @import "./node_modules/bootstrap/scss/reboot";
 @import "./node_modules/bootstrap/scss/root";
 @import "./node_modules/bootstrap/scss/button-group";
@@ -24,64 +24,97 @@
 @import "./node_modules/bootstrap/scss/type";
 @import "./node_modules/bootstrap/scss/utilities";
 
-@keyframes slide {
-  to {
-    transform: translate3d(0,0,0);
-    opacity: 1;
-  }
-}
-
 .obtera {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: 'Open Sans','Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;
+  font-family: 'Open Sans', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+
   ::-webkit-input-placeholder {
     color: rgba(0,0,0,.16);
   }
+
   :-webkit-input-placeholder {
     color: rgba(0,0,0,.16);
   }
+
   ::-moz-placeholder {
     color: rgba(0,0,0,.16);
   }
+
   :-moz-placeholder {
     color: rgba(0,0,0,.16);
   }
+
   ::-ms-input-placeholder {
     color: rgba(0,0,0,.16);
   }
+
   :-ms-input-placeholder {
     color: rgba(0,0,0,.16);
   }
+
   ::-o-input-placeholder {
     color: rgba(0,0,0,.16);
   }
+
   :-o-input-placeholder {
     color: rgba(0,0,0,.16);
   }
+
   ::input-placeholder {
     color: rgba(0,0,0,.16);
   }
+
   :input-placeholder {
     color: rgba(0,0,0,.16);
   }
+
   :focus {
     outline: none !important;
     box-shadow: none !important;
   }
-  h1,h2,h3,h4,h5,h6 {
-    font-family: 'Hindi Siliguri','Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'Hindi Siliguri', 'Segoe UI', Roboto, 'Helvetica Neue', Arial,sans-serif;
+    margin-bottom: 1rem;
   }
-  h1,h2,h3,h4,h5,h6,
-  abbr,acronym,address,big,blockquote,cite,
-  dt,em,ins,strong,q,thead,tt,var {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  abbr,
+  acronym,
+  address,
+  big,
+  blockquote,
+  cite,
+  dt,
+  em,
+  ins,
+  strong,
+  q,
+  thead,
+  tt,
+  var {
     color: var(--primary-text-color);
   }
+
   figcaption {
     margin: .5rem auto 1rem;
+    box-sizing: content-box;
     color: lighten(#757575, 5%);
     font-size: .875rem;
+    font-style: italic;
   }
+
   .the-title,
   .the-content,
   .the-content-attachment,
@@ -91,31 +124,58 @@
     transform: translate3d(0,0,0);
     z-index: 2;
   }
+
   .the-comments {
     background-color: darken(#f8f9fa, 5%);
   }
+
   .post-content,
   .post-comment {
     color: var(--secondary-text-color);
+
     table {
+      margin-bottom: 1rem;
       width: 100%;
+
       tr {
-        border-bottom: 1px solid #dee2e6 !important;
+        border-bottom: 1px solid #dee2e6;
+
+        &:first-child {
+          border-top: 1px solid rgba(0,0,0,0.1);
+          background-color: rgba(0,0,0,0.1);
+        }
+
+        td {
+          padding: .5rem;
+        }
       }
     }
-    figure,
+
     img {
       max-width: 100%;
       height: auto;
+      margin-bottom: 1rem;
+    }
+
+    figure {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 1rem;
+
+      img {
+        margin-bottom: 0;
+      }
     }
   }
+
   .embed-container {
     position: relative;
-    margin: 0 0 1rem;
+    margin: 0 auto 1rem;
     padding: 0 0 55.5%;
     width: 100%;
     height: 0;
     overflow: hidden;
+
     iframe,
     object,
     embed {
@@ -128,23 +188,18 @@
       height: 100%;
     }
   }
+
   .text-muted {
     color: var(--secondary-text-color) !important;
   }
+
   .twitter-tweet {
     margin: 1rem auto;
   }
+
   .search-form {
     .btn {
       cursor: pointer;
-    }
-  }
-  .item {
-    transition: transform .25s ease 0s;
-    transform: translate3d(0,5rem,0);
-    opacity: 0;
-    &.slide {
-      animation: slide .25s ease forwards;
     }
   }
 }
@@ -166,3 +221,6 @@
 
 // icons
 @import './src/assets/scss/icons';
+
+// wordpress blocks
+@import './src/assets/scss/gutenberg';

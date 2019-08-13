@@ -1,16 +1,24 @@
 header {
   backdrop-filter: blur(1rem);
-  background-color: rgba(255,255,255,.88);
+  background-color: rgba(255, 255, 255, .88);
   transition: box-shadow .25s linear;
-  transform: translate3d(0,0,0);
+  transform: translate3d(0, 0, 0);
+
   nav {
     .navbar-brand {
       line-height: 2rem;
+
       .header-logo {
+        margin-right: .5rem;
         width: auto;
         height: 2rem;
       }
+
+      .site-title {
+        font-size: 1.25rem;
+      }
     }
+
     #navbarSupportedContent {
       .navbar-nav {
         .menu-item {
@@ -23,10 +31,11 @@ header {
               border-right: .25em solid transparent;
             }
           }
+
           .dropdown-menu {
             -webkit-backdrop-filter: blur(1rem);
             backdrop-filter: blur(1rem);
-            background-color: rgba(255,255,255,0.88);
+            background-color: rgba(255, 255, 255, .88);
             font-size: inherit;
             font-weight: inherit;
           }

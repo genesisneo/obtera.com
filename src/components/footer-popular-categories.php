@@ -27,9 +27,17 @@
               <h5 class="mt-2 mb-3">Search</h5>
               <form class="form-inline row mb-3 search-form" role="search" method="get" action="<?php echo esc_url(home_url('/')); ?>">
                 <div class="col-12 input-group">
-                  <input class="form-control search-input" type="search" placeholder="Search..." name="s">
+                  <label hidden for="search">Search</label>
+                  <input
+                    id="search"
+                    class="form-control search-input"
+                    name="s"
+                    type="search"
+                    placeholder="Search..."
+                    aria-label="search"
+                  >
                   <div class="input-group-append">
-                    <button class="input-group-text dashicons-search btn" type="submit"></button>
+                    <button class="input-group-text dashicons-search btn" type="submit" aria-label="search"></button>
                   </div>
                 </div>
               </form>

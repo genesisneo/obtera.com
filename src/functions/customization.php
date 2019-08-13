@@ -155,19 +155,6 @@
     background: #343a40;
     overflow: hidden;
   }
-  .header-image {
-    position:absolute;
-    display:block;
-    top: calc(-100vh + 1px);
-    left:0;
-    right:0;
-    margin:0 auto;
-    padding:0;
-    width:auto;
-    height:100vh;
-    opacity:0;
-    z-index:-9999;
-  }
   .obtera {
     position: relative;
     display: block;
@@ -181,40 +168,6 @@
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
     overflow-scrolling: touch;
-  }
-  .obtera.show-splash {
-    overflow: hidden;
-  }
-  .obtera.show-splash .splash {
-    display: flex;
-  }
-  .splash {
-    position: absolute;
-    display: none;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    align-content: center;
-    align-items: center;
-    background-color: #fff;
-    justify-content: center;
-    z-index: 9999;
-  }
-  .splash .splash-logo {
-    position: absolute;
-    display: block;
-    width: 32px;
-    height: 32px;
-    animation: rotate 1s ease-in-out 0s infinite;
-  }
-  @keyframes rotate {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
   }
   body.admin-bar .obtera {
     top: 32px;
@@ -237,6 +190,19 @@
     body.admin-bar.fancybox-active .fancybox-container {
       top: 46px;
     }
+  }
+  .header-image {
+    position:absolute;
+    display:block;
+    top: calc(-100vh + 1px);
+    left:0;
+    right:0;
+    margin:0 auto;
+    padding:0;
+    width:auto;
+    height:100vh;
+    opacity:0;
+    z-index:-9999;
   }
 </style>
   <?php }

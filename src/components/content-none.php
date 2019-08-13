@@ -5,23 +5,38 @@
 
       <div class="col-12 mb-3 pb-3 text-center post-content">
         <h4>Nothing found</h4>
+
         <?php
           if (is_home() && current_user_can('publish_posts')) :
             printf('<p>Ready to publish your first post?<br><a href="%1$s">Get started here</a>.</p>', esc_url(admin_url('post-new.php')));
           else:
             printf('<p>It seems we can&rsquo;t find what you&rsquo;re looking for.<br class="d-none d-sm-block"> Perhaps searching can help.</p>');
             ?>
-            <form class="form-inline mb-3 search-form" role="search" method="get" action="<?php echo esc_url(home_url('/')); ?>">
+            <form
+              class="form-inline mb-3 search-form"
+              role="search"
+              method="get"
+              action="<?php echo esc_url(home_url('/')); ?>"
+            >
               <div class="input-group mx-auto">
-                <input class="form-control search-input" type="search" placeholder="Search..." name="s">
+                <label hidden for="search">Search</label>
+                <input
+                  id="search"
+                  class="form-control search-input"
+                  name="s"
+                  type="search"
+                  placeholder="Search..."
+                  aria-label="search"
+                >
                 <div class="input-group-append">
-                  <button class="input-group-text dashicons-search btn" type="submit"></button>
+                  <button class="input-group-text dashicons-search btn" type="submit" aria-label="search"></button>
                 </div>
               </div>
             </form>
             <?php
           endif;
         ?>
+
       </div>
 
     </div>

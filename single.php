@@ -22,7 +22,7 @@
   <?php include(get_template_directory() . '/src/assets/scss/single.css'); ?>
 </style>
 
-<script type="text/javascript">
+<script type="text/javascript" defer>
   document.addEventListener('DOMContentLoaded', function() {
     // parallax
     initializeParallax(document.querySelector('.obtera'));

@@ -1,0 +1,113 @@
+.post-content,
+.post-comment {
+  .wp-block {
+    &-button,
+    &-columns,
+    &-cover,
+    &-file,
+    &-image,
+    &-gallery,
+    &-table,
+    &-search,
+    &-quote,
+    &-pullquote,
+    &-preformatted,
+    &-media-text {
+      margin-bottom: 1rem;
+    }
+
+    &-button,
+    &-file {
+      .wp-block-file__button,
+      .wp-block-button__link {
+        display: inline-block;
+        padding: .375rem .75rem;
+        background-color: #007bff;
+        border: 1px solid #007bff;
+        border-radius: .25rem;
+        color: #fff;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        opacity: 1 !important;
+        text-align: center;
+        text-decoration: none;
+        transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        user-select: none;
+        vertical-align: middle;
+
+        &:hover {
+          color: #fff;
+          background-color: #0069d9;
+          border-color: #0062cc;
+        }
+
+        &:not(:disabled):not(.disabled):active {
+          color: #fff;
+          background-color: #0062cc;
+          border-color: #005cbf;
+        }
+      }
+    }
+
+    &-columns {
+      > div {
+        margin-bottom: 0;
+      }
+    }
+
+    &-image,
+    &-gallery,
+    &-media-text {
+      figure {
+        margin-bottom: 0;
+      }
+
+      figcaption {
+        margin: 0 auto 0;
+        padding: 1rem 0 .5rem;
+        font-size: .875rem;
+      }
+    }
+
+    &-quote {
+      padding-left: 1rem;
+      border-left: .5rem solid #e83e8c;
+
+      p {
+        margin-bottom: 0;
+        font-size: 1.25rem;
+      }
+      cite {
+        color: var(--secondary-text-color);
+        font-size: .875rem;
+      }
+    }
+
+    &-pullquote {
+      border-top: 1px solid rgba(0,0,0,0.1);
+      border-bottom: 1px solid rgba(0,0,0,0.1);
+      padding: 2rem 1rem;
+
+      blockquote,
+      p {
+        margin-bottom: 0;
+      }
+      cite {
+        color: var(--secondary-text-color);
+        font-size: .875rem;
+      }
+    }
+
+    &-preformatted {
+      padding: 1rem;
+      border: 1px solid rgba(0,0,0,0.1);
+    }
+
+    &-media-text {
+      p {
+        margin: 1rem auto;
+      }
+    }
+  }
+}

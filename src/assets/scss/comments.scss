@@ -4,17 +4,20 @@
       list-style: none;
       margin: 0;
       padding: 0;
+
       .comment {
         .media {
           .author-avatar {
             border-radius: 4rem;
           }
+
           .media-body {
             .reply {
               margin-top: 2px;
             }
           }
         }
+
         .children {
           list-style: none;
           margin: 0;

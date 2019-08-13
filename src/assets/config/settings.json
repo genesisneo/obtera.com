@@ -14,7 +14,6 @@
         "./node_modules/jquery-lazy/jquery.lazy.min.js",
         "./src/assets/js/parallax.js",
         "./src/assets/js/fancybox.js",
-        "./src/assets/js/visible.js",
         "./src/assets/js/scripts.js"
       ]
     },

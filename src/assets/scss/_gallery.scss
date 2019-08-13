@@ -1,6 +1,7 @@
 .gallery,
 .widget-area {
   margin-bottom: 1rem;
+
   .gallery-item {
     display: inline-block;
     margin: 0 0 1rem;
@@ -9,6 +10,7 @@
     max-width: 100%;
     text-align: center;
     vertical-align: top;
+
     a,
     a:hover,
     a:focus {
@@ -16,6 +18,7 @@
       -webkit-box-shadow: none;
       box-shadow: none;
     }
+
     a {
       img {
         display: block;
@@ -27,6 +30,7 @@
         -webkit-transition: filter .16s ease-out;
         transition: filter .16s ease-out;
       }
+
       &:hover,
       &:focus {
         img {
@@ -36,65 +40,80 @@
       }
     }
   }
+
   .gallery-caption {
     display: block;
   }
+
   &.gallery-columns-1 {
     .gallery-item {
       width: 100%;
     }
   }
+
   &.gallery-columns-2 {
     .gallery-item {
       max-width: 50%;
     }
   }
+
   &.gallery-columns-3 {
     .gallery-item {
       max-width: 33.33%;
     }
   }
+
   &.gallery-columns-4 {
     .gallery-item {
       max-width: 25%;
     }
   }
+
   &.gallery-columns-5 {
     .gallery-item {
       max-width: 20%;
     }
+
     .gallery-caption {
       display: none;
     }
   }
+
   &.gallery-columns-6 {
     .gallery-item {
       max-width: 16.66%;
     }
+
     .gallery-caption {
       display: none;
     }
   }
+
   &.gallery-columns-7 {
     .gallery-item {
       max-width: 14.28%;
     }
+
     .gallery-caption {
       display: none;
     }
   }
+
   &.gallery-columns-8 {
     .gallery-item {
       max-width: 12.5%;
     }
+
     .gallery-caption {
       display: none;
     }
   }
+
   &.gallery-columns-9 {
     .gallery-item {
       max-width: 11.11%;
     }
+
     .gallery-caption {
       display: none;
     }
@@ -107,21 +126,25 @@
     .gallery-item {
       max-width: 25%;
     }
+
     &.gallery-columns-1 {
       .gallery-item {
         max-width: 100%;
       }
     }
+
     &.gallery-columns-2 {
       .gallery-item {
         max-width: 50%;
       }
     }
+
     &.gallery-columns-3 {
       .gallery-item {
         max-width: 33.33%;
       }
     }
+
     &.gallery-columns-4 {
       .gallery-item {
         max-width: 25%;
@@ -138,21 +161,25 @@
         max-width: 20%;
       }
     }
+
     &.gallery-columns-6 {
       .gallery-item {
         max-width: 16.66%;
       }
     }
+
     &.gallery-columns-7 {
       .gallery-item {
         max-width: 14.28%;
       }
     }
+
     &.gallery-columns-8 {
       .gallery-item {
         max-width: 12.5%;
       }
     }
+
     &.gallery-columns-9 {
       .gallery-item {
         max-width: 11.11%;

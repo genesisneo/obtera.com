@@ -129,13 +129,14 @@
 
   // Add custom styles on header
   function obtera_custom_styles() { ?>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Hind+Siliguri|Open+Sans&display=swap"> 
     <link rel="stylesheet" href="<?php echo get_theme_file_uri('/src/assets/scss/obtera.css'); ?>" media="none" onload="if(media!='all')media='all'">
   <?php }
   add_action('wp_head', 'obtera_custom_styles');
 
   // Add custom script on footer
   function obtera_custom_script() { ?>
-    <script type="text/javascript" src="<?php echo get_theme_file_uri('/src/assets/js/obtera.js'); ?>"></script>
+    <script type="text/javascript" src="<?php echo get_theme_file_uri('/src/assets/js/obtera.js'); ?>" defer></script>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",

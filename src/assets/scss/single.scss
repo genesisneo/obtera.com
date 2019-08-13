@@ -1,45 +1,37 @@
 .content-single {
   position: relative;
+
   .parallax {
     position: relative;
     display: block;
-    margin: -16vh auto;
+    margin: -16vh auto -8vh;
     padding: 0;
     width: 100vw;
     height: 100vh;
     background-position: 50% 0;
     background-size: cover;
   }
+
   .the-title {
     background-color: var(--light);
   }
+
   .the-content {
     background-color: var(--white);
+
     .post-details {
-      .post-author {
-        a {
-          color: var(--primary-text-color);
-        }
-        .text-muted {
-          font-size: .875rem;
-        }
+      a,
+      p {
+        color: var(--primary-text-color);
+        text-transform: capitalize;
       }
-      .post-date,
-      .post-format,
-      .post-categories,
-      .post-tags {
-        > span {
-          font-size: .875rem;
-        }
-        > p {
-          a {
-            color: var(--primary-text-color);
-            text-transform: capitalize;
-          }
-        }
+
+      .text-muted {
+        font-size: .875rem;
       }
     }
   }
+
   .the-content-attachment {
     margin: 0 auto;
   }
