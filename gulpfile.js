@@ -1,17 +1,16 @@
 'use strict';
 
 var config = require('./src/assets/config/settings.json'),
-  autoprefixer = require('gulp-autoprefixer'),
-  strip = require('gulp-strip-css-comments'),
-  runSequence = require('run-sequence'),
-  uglify = require('gulp-uglify'),
-  concat = require('gulp-concat'),
-  util = require('gulp-util'),
+  gulp = require('gulp'),
+  noop = require('gulp-noop'),
   sass = require('gulp-sass'),
-  gulp = require('gulp');
+  concat = require('gulp-concat'),
+  uglify = require('gulp-uglify'),
+  strip = require('gulp-strip-css-comments'),
+  autoprefixer = require('gulp-autoprefixer');
 
 var browserSyncRunning = false, browserSync;
-gulp.task('browserSync', function() {
+gulp.task('browserSync', function(callback) {
   if (!browserSyncRunning) {
     browserSync = require('browser-sync').create();
     browserSync.init({
@@ -29,6 +28,7 @@ gulp.task('browserSync', function() {
     });
     browserSyncRunning = true;
   }
+  callback();
 });
 
 gulp.task('scss', function() {
@@ -37,7 +37,7 @@ gulp.task('scss', function() {
     .pipe(strip({preserve:false}))
     .pipe(autoprefixer())
     .pipe(gulp.dest(config.theme.scss.path))
-    .pipe(browserSyncRunning ? browserSync.reload({stream:true}) : util.noop());
+    .pipe(browserSyncRunning ? browserSync.reload({stream:true}) : noop());
 });
 
 gulp.task('js', function() {
@@ -45,16 +45,18 @@ gulp.task('js', function() {
     .pipe(concat('obtera.js'))
     .pipe(uglify({"compress":true}))
     .pipe(gulp.dest(config.theme.js.path))
-    .pipe(browserSyncRunning ? browserSync.reload({stream:true}) : util.noop());
+    .pipe(browserSyncRunning ? browserSync.reload({stream:true}) : noop());
 });
 
-gulp.task('default', function() {
-  return runSequence(['js', 'scss'], 'browserSync', function() {
+gulp.task('default', gulp.series(
+  gulp.parallel('js', 'scss'),
+  'browserSync',
+  function() {
     gulp.watch(['./**/*.php'], browserSyncRunning ? browserSync.reload : {});
-    gulp.watch([config.theme.scss.path + '/*.scss'], ['scss']);
-    gulp.watch([config.theme.js.path + '/scripts.js'], ['js']);
-  });
-});
+    gulp.watch([config.theme.scss.path + '/*.scss'], gulp.task('scss'));
+    gulp.watch([config.theme.js.path + '/scripts.js'], gulp.task('js'));
+  }
+));
 
 var dist = config.dist;
 gulp.task('copy', function() {
@@ -68,6 +70,7 @@ gulp.task('copy', function() {
   }
 });
 
-gulp.task('dist', function() {
-  return runSequence(['js', 'scss'], 'copy');
-});
+gulp.task('dist', gulp.series(
+  gulp.parallel('js', 'scss'),
+  'copy'
+));

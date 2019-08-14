@@ -1,6 +1,6 @@
 {
   "name": "obtera",
-  "version": "1.0.0",
+  "version": "1.0.5",
   "description": "A mobile friendly, minimal, and modern WordPress theme designed for Obtera.com. Focus on speed, performance, and usability for the end user.",
   "main": "gulpfile.js",
   "scripts": {
@@ -17,20 +17,19 @@
   "author": "Neo Genesis",
   "license": "MIT",
   "dependencies": {
-    "bootstrap": "^4.1.1",
+    "bootstrap": "^4.3.1",
     "jquery": "^3.4.1",
-    "popper.js": "^1.14.3"
+    "popper.js": "^1.15.0"
   },
   "devDependencies": {
     "browser-sync": "^2.26.7",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "gulp-autoprefixer": "^5.0.0",
     "gulp-concat": "^2.6.1",
-    "gulp-sass": "^4.0.1",
+    "gulp-noop": "^1.0.0",
+    "gulp-sass": "^4.0.2",
     "gulp-strip-css-comments": "^2.0.0",
     "gulp-uglify": "^3.0.0",
-    "gulp-util": "^3.0.8",
-    "jquery-lazy": "^1.7.9",
-    "run-sequence": "^2.2.1"
+    "jquery-lazy": "^1.7.9"
   }
 }
