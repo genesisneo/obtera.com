@@ -129,7 +129,6 @@
 
   // Add custom styles on header
   function obtera_custom_styles() { ?>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Hind+Siliguri|Open+Sans&display=swap"> 
     <link rel="stylesheet" href="<?php echo get_theme_file_uri('/src/assets/scss/obtera.css'); ?>" media="none" onload="if(media!='all')media='all'">
   <?php }
   add_action('wp_head', 'obtera_custom_styles');
@@ -168,11 +167,6 @@
     }
   }
   add_action('wp_head', 'obtera_pingback_header');
-
-  // Add dashicons on themes
-  add_action('wp_enqueue_scripts', function() {
-    wp_enqueue_style('dashicons');
-  });
 
   // Remove admin bar styles
   add_action('get_header', function() {

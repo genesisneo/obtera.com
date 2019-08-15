@@ -59,7 +59,7 @@ gulp.task('default', gulp.series(
 ));
 
 var dist = config.dist;
-gulp.task('copy', function() {
+gulp.task('copy', function(callback) {
   for (var key in dist) {
     var files = dist[key].files;
     var path = dist[key].path;
@@ -68,6 +68,7 @@ gulp.task('copy', function() {
         .pipe(gulp.dest(path));
     });
   }
+  callback();
 });
 
 gulp.task('dist', gulp.series(

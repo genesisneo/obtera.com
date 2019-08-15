@@ -37,12 +37,14 @@
     @$dom->loadHTML($content);
     foreach ($dom->getElementsByTagName('img') as $node) {
       $node->setAttribute("loading", 'lazy');
-      $node->setAttribute("class", 'lazy ' . $node->getAttribute('class'));
-      $node->setAttribute("data-src", $node->getAttribute('src'));
-      $node->setAttribute("src", 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP88fPXfwAJyAPs05GT/QAAAABJRU5ErkJggg==');
-      if ($node->getAttribute('srcset')) {
-        $node->setAttribute("data-srcset", $node->getAttribute('srcset'));
-        $node->setAttribute("srcset", 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP88fPXfwAJyAPs05GT/QAAAABJRU5ErkJggg==');
+      if (!function_exists('is_amp_endpoint') || !is_amp_endpoint()) {
+        $node->setAttribute("class", 'lazy ' . $node->getAttribute('class'));
+        $node->setAttribute("data-src", $node->getAttribute('src'));
+        $node->setAttribute("src", 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP88fPXfwAJyAPs05GT/QAAAABJRU5ErkJggg==');
+        if ($node->getAttribute('srcset')) {
+          $node->setAttribute("data-srcset", $node->getAttribute('srcset'));
+          $node->setAttribute("srcset", 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP88fPXfwAJyAPs05GT/QAAAABJRU5ErkJggg==');
+        }
       }
     }
     $newHtml = preg_replace('/^<!DOCTYPE.+?>/', '', str_replace( array('<html>', '</html>', '<body>', '</body>'), array('', '', '', ''), $dom->saveHTML()));

@@ -27,7 +27,6 @@
 .obtera {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: 'Open Sans', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 
   ::-webkit-input-placeholder {
     color: rgba(0,0,0,.16);
@@ -80,7 +79,6 @@
   h4,
   h5,
   h6 {
-    font-family: 'Hindi Siliguri', 'Segoe UI', Roboto, 'Helvetica Neue', Arial,sans-serif;
     margin-bottom: 1rem;
   }
 
@@ -123,6 +121,14 @@
     position: relative;
     transform: translate3d(0,0,0);
     z-index: 2;
+  }
+
+  .the-content-none {
+    .icon {
+      width: 1rem;
+      height: 1rem;
+      fill: var(--gray);
+    }
   }
 
   .the-comments {
@@ -218,9 +224,6 @@
 
 // fancybox
 @import './src/assets/scss/fancybox';
-
-// icons
-@import './src/assets/scss/icons';
 
 // wordpress blocks
 @import './src/assets/scss/gutenberg';

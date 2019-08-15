@@ -11,7 +11,7 @@
       '</style>' .
       '<script type="text/javascript" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" async></script>' .
       '<ins class="adsbygoogle google-ads" data-ad-client="' . get_theme_mod('google_adsense', 'ca-pub-4543509049123673') . '" data-ad-slot="' . get_theme_mod('google_adsense_default', '3941328836') . '" data-ad-format="auto"></ins>' .
-      '<script>(adsbygoogle = window.adsbygoogle || []).push({' .
+      '<script type="text/javascript">(adsbygoogle = window.adsbygoogle || []).push({' .
         'google_ad_client: "' . get_theme_mod('google_adsense', 'ca-pub-4543509049123673') . '"' .
       '});</script>' .
     '</div>';
@@ -25,7 +25,7 @@
       '</style>' .
       '<script type="text/javascript" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" async></script>' .
       '<ins class="adsbygoogle google-ads" data-ad-client="' . get_theme_mod('google_adsense', 'ca-pub-4543509049123673') . '" data-ad-slot="' . get_theme_mod('google_adsense_colored', '5500728600') . '" data-ad-format="auto"></ins>' .
-      '<script>(adsbygoogle = window.adsbygoogle || []).push({' .
+      '<script type="text/javascript">(adsbygoogle = window.adsbygoogle || []).push({' .
         'google_ad_client: "' . get_theme_mod('google_adsense', 'ca-pub-4543509049123673') . '"' .
       '});</script>' .
     '</div>';
@@ -39,7 +39,7 @@
   // Google Analytics
   function google_analytics() { ?>
     <script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=<?php echo get_theme_mod('google_analytics', 'UA-68704357-1'); ?>" async></script>
-    <script>
+    <script type="text/javascript">
       window.dataLayer = window.dataLayer || [];
       function gtag() { dataLayer.push(arguments); }
       gtag("js", new Date());
@@ -49,9 +49,11 @@
   add_action('wp_footer', 'google_analytics');
 
   // AddThis Analytics
-  function addthis_analytics() { ?>
-    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=<?php echo get_theme_mod('addthis_id', 'ra-562f202ecd1822ce'); ?>" async></script>
-  <?php }
+  function addthis_analytics() {
+    if( is_page() || is_single() ) { ?>
+      <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=<?php echo get_theme_mod('addthis_id', 'ra-562f202ecd1822ce'); ?>" async></script>
+    <?php }
+  }
   add_action('wp_footer', 'addthis_analytics');
 
 ?>

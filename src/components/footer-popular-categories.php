@@ -37,7 +37,11 @@
                     aria-label="search"
                   >
                   <div class="input-group-append">
-                    <button class="input-group-text dashicons-search btn" type="submit" aria-label="search"></button>
+                    <button class="input-group-text btn" type="submit" aria-label="search">
+                      <svg class="icon icon-search" role="img">
+                        <use href="#icon-search" xlink:href="#icon-search"></use>
+                      </svg>
+                    </button>
                   </div>
                 </div>
               </form>
