@@ -10,21 +10,6 @@ $(function(){
     });
   }
 
-  // remove domain name in all links
-  for (var i=0; i<$('.obtera a').length; i++) {
-    var $this = $('.obtera a')[i],
-        path = $this.getAttribute('href'),
-        expression = new RegExp("^https?://" + window.location.hostname, 'i'),
-        newPath;
-    if (path !== null && expression.test(path)) {
-      newPath = path.replace(window.location.origin, '');
-      $this.setAttribute('href', newPath);
-      if ($this.getAttribute('data-action')) {
-        $this.setAttribute('data-value', newPath);
-      }
-    }
-  }
-
   // add shadow class on header once srolled
   $('.obtera').scroll(function() {
     if ($(this).scrollTop() > 1) {
@@ -48,43 +33,6 @@ $(function(){
       });
     }
   });
-
-  // auto enable fancybox if href is image
-  $('.post-content a[href$=".jpg"],' +
-    '.post-content a[href$=".jpeg"],' +
-    '.post-content a[href$=".png"],' +
-    '.post-content a[href$=".gif"],' +
-    '.post-content a [href$=".bmp"]').each(function() {
-    $(this).attr('data-fancybox','obtera');
-    $('[data-fancybox]').fancybox({
-      buttons: [
-        "zoom",
-        "download",
-        "close"
-      ],
-      transitionEffect: "slide",
-    });
-  });
-
-  // auto enable fancybox on galleries
-  if ($('.gallery').length) {
-    var galleryId = $('.gallery').attr('id');
-    $('#' + galleryId + ' a[href$=".jpg"],' +
-      '#' + galleryId + ' a[href$=".jpeg"],' +
-      '#' + galleryId + ' a[href$=".png"],' +
-      '#' + galleryId + ' a[href$=".gif"],' +
-      '#' + galleryId + ' a[href$=".bmp"]').each(function() {
-      $(this).attr('data-fancybox',galleryId);
-      $('[data-fancybox="' + galleryId + '"]').fancybox({
-        buttons: [
-          "zoom",
-          "download",
-          "close"
-        ],
-        transitionEffect: "slide",
-      });
-    });
-  }
 
   // search validation
   $('.search-form .btn').click(function() {
