@@ -136,27 +136,6 @@
   // Add custom script on footer
   function obtera_custom_script() { ?>
     <script type="text/javascript" src="<?php echo get_theme_file_uri('/src/assets/js/obtera.js'); ?>" defer></script>
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "<?php bloginfo('name'); ?>",
-        "url": "<?php echo get_home_url(); ?>/",
-        "logo": "<?php echo get_theme_file_uri('/src/assets/img/obtera.png'); ?>",
-        "sameAs": [
-          "https://facebook.com/obteracom",
-          "https://twitter.com/obteracom",
-          "https://plus.google.com/+Obteracom",
-          "https://youtube.com/obteracom",
-          "https://obteracom.tumblr.com/"
-        ],
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": "<?php echo get_home_url(); ?>/?s={query}",
-          "query-input": "required name=query"
-        }
-      }
-    </script>
   <?php }
   add_action('wp_footer', 'obtera_custom_script');
 

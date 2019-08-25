@@ -4,20 +4,15 @@
   function callback_relative_url($buffer) {
     $home_url = esc_url(home_url('/'));
     $home_url_relative = wp_make_link_relative($home_url);
-    $home_url_escaped = str_replace('/', '\/', $home_url);
-    $home_url_escaped_relative = str_replace('/', '\/', $home_url_relative);
     $buffer = str_replace($home_url, $home_url_relative, $buffer);
-    $buffer = str_replace($home_url_escaped, $home_url_escaped_relative, $buffer);
     return $buffer;
   }
-  function buffer_start_relative_url() {
+  add_action('registered_taxonomy', function() {
     ob_start('callback_relative_url');
-  }
-  function buffer_end_relative_url() {
+  });
+  add_action('shutdown', function() {
     @ob_end_flush();
-  }
-  add_action('registered_taxonomy', 'buffer_start_relative_url');
-  add_action('shutdown', 'buffer_end_relative_url');
+  });
 
   // Types of ads as variable
   $adsDefault = get_theme_mod('google_adsense_default', '3941328836');
