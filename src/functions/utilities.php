@@ -18,15 +18,29 @@
   $adsDefault = get_theme_mod('google_adsense_default', '3941328836');
   $adsColored = get_theme_mod('google_adsense_colored', '5500728600');
   $adsId = (rand(0,1) < 0.5) ? $adsDefault : $adsColored;
+  $adsFormat = wp_is_mobile() ? 'rectangle' : 'horizontal';
   function google_adsense_ads() {
-    global $adsId;
+    global $adsId, $adsFormat;
     return '' .
     '<div class="col-12 mb-3 px-0 pb-3 text-center border-top border-bottom">' .
       '<p class="small text-muted my-3">' . __('ADVERTISEMENT') . '</p>' .
       '<style type="text/css">' .
-        '.google-ads { display:inline-block;width:320px;height:100px; }' .
-        '@media(min-width: 500px) { .google-ads { width:468px;height:60px; } }' .
-        '@media(min-width: 800px) { .google-ads { width:728px;height:90px; } }' .
+        '.google-ads {' .
+          'display:inline-block;' .
+          'width:320px !important; height:100px !important;' .
+          'min-width:320px !important; min-height:100px !important;' .
+          'max-width:320px !important; max-height:100px !important;' .
+        '}' .
+        '@media(min-width: 500px) { .google-ads {' .
+          'width:468px !important; height:60px !important;' .
+          'min-width:468px !important; min-height:60px !important;' .
+          'max-width:468px !important; max-height:60px !important;' .
+        '}}' .
+        '@media(min-width: 800px) { .google-ads {' .
+          'width:728px !important; height:90px !important;' .
+          'min-width:728px !important; min-height:90px !important;' .
+          'max-width:728px !important; max-height:90px !important;' .
+        '}}' .
       '</style>' .
       '<script type="text/javascript" async>' .
         'window.addEventListener("load", function() {' .
@@ -36,11 +50,13 @@
           'document.head.appendChild(adsTag);' .
         '});' .
       '</script>' .
-      '<ins class="adsbygoogle google-ads" data-ad-client="' . get_theme_mod('google_adsense', 'ca-pub-4543509049123673') . '" data-ad-slot="' . $adsId . '" data-ad-format="auto"></ins>' .
+      '<ins class="adsbygoogle google-ads"' .
+        'data-ad-client="' . get_theme_mod('google_adsense', 'ca-pub-4543509049123673') . '"' .
+        'data-ad-slot="' . $adsId . '"' .
+        'data-ad-format="' . $adsFormat . '"' .
+        'data-full-width-responsive="false"></ins>' .
       '<script type="text/javascript">' .
-        '(adsbygoogle = window.adsbygoogle || []).push({' .
-        'google_ad_client: "' . get_theme_mod('google_adsense', 'ca-pub-4543509049123673') . '"' .
-        '});' .
+        '(adsbygoogle = window.adsbygoogle || []).push({});' .
       '</script>' .
     '</div>';
   }
