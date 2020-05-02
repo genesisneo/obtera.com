@@ -17,9 +17,9 @@
   "author": "Neo Genesis",
   "license": "MIT",
   "dependencies": {
-    "bootstrap": "^4.3.1",
-    "jquery": "^3.4.1",
-    "popper.js": "^1.15.0"
+    "bootstrap": "^4.4.1",
+    "jquery": "^3.5.0",
+    "popper.js": "^1.16.1"
   },
   "devDependencies": {
     "browser-sync": "^2.26.7",
@@ -27,9 +27,9 @@
     "gulp-autoprefixer": "^5.0.0",
     "gulp-concat": "^2.6.1",
     "gulp-noop": "^1.0.0",
-    "gulp-sass": "^4.0.2",
+    "gulp-sass": "^4.1.0",
     "gulp-strip-css-comments": "^2.0.0",
-    "gulp-uglify": "^3.0.0",
+    "gulp-uglify": "^3.0.2",
     "jquery-lazy": "^1.7.9"
   }
 }
