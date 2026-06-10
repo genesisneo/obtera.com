@@ -1,3 +1,4 @@
+<p align="center">⚠️ This theme will be updated to a WordPress Block Theme soon!</p>
 
 # Obtera.com WordPress Theme
 
