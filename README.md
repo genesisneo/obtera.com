@@ -1,4 +1,5 @@
 <p align="center">
+  ⚠️⚠️<br />
   ⚠️⚠️⚠️<br />
   This theme will be updated to a WordPress Block Theme soon!
 </p>
