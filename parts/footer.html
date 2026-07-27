@@ -1,0 +1,103 @@
+<!-- wp:group {"metadata":{"name":"Footer","patternName":"obtera/hidden-footer"},"style":{"elements":{"link":{"color":{"text":"var:preset|color|text-white"}}},"spacing":{"margin":{"top":"-1rem","bottom":"0"},"blockGap":"0rem"}},"backgroundColor":"primary","textColor":"text-white","layout":{"type":"constrained"}} -->
+<div
+  class="wp-block-group has-text-white-color has-primary-background-color has-text-color has-background has-link-color"
+  style="margin-top:-1rem;margin-bottom:0">
+  <!-- wp:spacer {"height":"1rem","width":"100%","style":{"spacing":{"margin":{"top":"0","bottom":"0"}}}} -->
+  <div style="margin-top:0;margin-bottom:0;height:1rem;width:100%" aria-hidden="true" class="wp-block-spacer"></div>
+  <!-- /wp:spacer -->
+
+  <!-- wp:group {"metadata":{"name":"Footer Group"},"align":"wide","style":{"spacing":{"padding":{"left":"var:preset|spacing|40","right":"var:preset|spacing|40"}},"elements":{"link":{"color":{"text":"var:preset|color|text-white"}}}},"textColor":"text-white","layout":{"type":"flex","flexWrap":"wrap","justifyContent":"center","verticalAlignment":"top"}} -->
+  <div class="wp-block-group alignwide has-text-white-color has-text-color has-link-color"
+    style="padding-right:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)">
+    <!-- wp:columns {"verticalAlignment":"top","style":{"layout":{"selfStretch":"fill","flexSize":null},"spacing":{"blockGap":{"top":"2rem","left":"2rem"}}}} -->
+    <div class="wp-block-columns are-vertically-aligned-top">
+      <!-- wp:column {"verticalAlignment":"top","width":"50%"} -->
+      <div class="wp-block-column is-vertically-aligned-top" style="flex-basis:50%">
+        <!-- wp:group {"metadata":{"name":"Identity"},"style":{"spacing":{"blockGap":"1rem"}},"layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"top"}} -->
+        <div class="wp-block-group"><!-- wp:site-logo {"width":48,"style":{"spacing":{"margin":{"top":"0.25rem"}}}} /-->
+
+          <!-- wp:group {"metadata":{"name":"Name + Tagline"},"layout":{"type":"constrained"}} -->
+          <div class="wp-block-group"><!-- wp:site-title {"level":0,"style":{"typography":{"fontSize":"1.5rem"}}} /-->
+
+            <!-- wp:site-tagline {"style":{"spacing":{"margin":{"top":"-4px"}},"typography":{"fontSize":"0.875rem"}}} /-->
+          </div>
+          <!-- /wp:group -->
+        </div>
+        <!-- /wp:group -->
+
+        <!-- wp:social-links {"iconColor":"white","iconColorValue":"#ffffff","openInNewTab":true,"size":"has-small-icon-size","className":"is-style-logos-only"} -->
+        <ul class="wp-block-social-links has-small-icon-size has-icon-color is-style-logos-only">
+          <!-- wp:social-link {"url":"https://facebook.com/obteracom","service":"facebook"} /-->
+          <!-- wp:social-link {"url":"https://instagram.com/obteracom","service":"instagram"} /-->
+          <!-- wp:social-link {"url":"https://twitter.com/obteracom","service":"x"} /-->
+          <!-- wp:social-link {"url":"https://youtube.com/obteracom","service":"youtube"} /-->
+          <!-- wp:social-link {"url":"mailto:info@obtera.com","service":"mail"} /-->
+        </ul>
+        <!-- /wp:social-links -->
+
+        <!-- wp:paragraph {"style":{"typography":{"fontSize":"1rem"}}} -->
+        <p style="font-size:1rem">Obtera.com is a news and opinion site about technology, digital trends, reviews,
+          cultures, and more. We’re here to inform you and, sometimes, entertain you.<br><br><a href="/about/">Read
+            more</a></p>
+        <!-- /wp:paragraph -->
+      </div>
+      <!-- /wp:column -->
+
+      <!-- wp:column {"verticalAlignment":"top","width":"30%"} -->
+      <div class="wp-block-column is-vertically-aligned-top" style="flex-basis:30%">
+        <!-- wp:paragraph {"style":{"typography":{"textTransform":"uppercase","fontStyle":"normal","fontWeight":"700","fontSize":"0.875rem"}}} -->
+          <p style="font-size:0.875rem;font-style:normal;font-weight:700;text-transform:uppercase">Latest Posts</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:query {"queryId":1,"query":{"perPage":3,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date"},"align":"left","className":"alignleft wp-block-latest-posts__list has-dates","style":{"spacing":{"margin":{"top":"var:preset|spacing|40","right":"0"}}}} -->
+        <div class="wp-block-query alignleft wp-block-latest-posts__list has-dates">
+          <!-- wp:post-template {"style":{"spacing":{"blockGap":"1rem","padding":{"top":"0","bottom":"0"}}},"layout":{"type":"default"}} -->
+          <!-- wp:group {"style":{"spacing":{"blockGap":"1rem"}},"layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"top"}} -->
+          <div class="wp-block-group">
+            <!-- wp:post-featured-image {"isLink":true,"aspectRatio":"1","width":"48px","height":"48px","sizeSlug":"thumbnail","align":"left","className":"wp-block-latest-posts__featured-image alignleft"} /-->
+
+            <!-- wp:group {"style":{"spacing":{"blockGap":"0rem"}},"layout":{"type":"constrained"}} -->
+            <div class="wp-block-group">
+              <!-- wp:post-date {"format":"j F Y","metadata":{"bindings":{"datetime":{"source":"core/post-data","args":{"field":"date"}}}},"className":"wp-block-latest-posts__post-date","style":{"typography":{"fontSize":"0.75rem","textTransform":"uppercase"}}} /-->
+
+              <!-- wp:post-title {"isLink":true,"className":"wp-block-latest-posts__post-title","style":{"typography":{"fontSize":"0.875rem"}}} /-->
+            </div>
+            <!-- /wp:group -->
+          </div>
+          <!-- /wp:group -->
+          <!-- /wp:post-template -->
+        </div>
+        <!-- /wp:query -->
+      </div>
+      <!-- /wp:column -->
+
+      <!-- wp:column {"verticalAlignment":"top","width":"20%"} -->
+      <div class="wp-block-column is-vertically-aligned-top" style="flex-basis:20%">
+        <!-- wp:paragraph {"style":{"typography":{"textTransform":"uppercase","fontStyle":"normal","fontWeight":"700","fontSize":"0.875rem"}}} -->
+          <p style="font-size:0.875rem;font-style:normal;font-weight:700;text-transform:uppercase">Popular Categories</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:categories {"showPostCounts":true,"className":"wp-categories","style":{"spacing":{"margin":{"top":"var:preset|spacing|40","bottom":"0","right":"0","left":"0"},"padding":{"top":"0","bottom":"0","left":"0","right":"0"}},"typography":{"fontSize":"0.875rem"}}} /-->
+      </div>
+      <!-- /wp:column -->
+    </div>
+    <!-- /wp:columns -->
+  </div>
+  <!-- /wp:group -->
+
+  <!-- wp:spacer {"height":"1rem","width":"100%"} -->
+  <div style="height:1rem;width:100%" aria-hidden="true" class="wp-block-spacer"></div>
+  <!-- /wp:spacer -->
+
+  <!-- wp:group {"metadata":{"name":"Copyright"},"align":"full","style":{"spacing":{"padding":{"top":"1rem","bottom":"1rem"}}},"backgroundColor":"primary-dark","layout":{"type":"flex","orientation":"vertical","justifyContent":"center","verticalAlignment":"center"}} -->
+  <div class="wp-block-group alignfull has-primary-dark-background-color has-background"
+    style="padding-top:1rem;padding-bottom:1rem">
+    <!-- wp:paragraph {"style":{"typography":{"textAlign":"center","fontSize":"0.875rem"}}} -->
+    <p class="has-text-align-center" style="font-size:0.875rem">Copyright © <span id="year"></span> Obtera.com. All rights reserved.</p>
+    <!-- /wp:paragraph -->
+  </div>
+  <!-- /wp:group -->
+</div>
+<!-- /wp:group -->
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>

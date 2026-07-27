@@ -1,10 +1,123 @@
-/*!
+/*
 Theme Name: Obtera
 Theme URI: https://obtera.com
-Description: A mobile friendly, minimal, and modern WordPress theme designed for Obtera.com. Focus on speed, performance, and usability for the end user.
-Version: 1.0.0
-Author: Neo Genesis
+Author: Obtera.com
 Author URI: https://obtera.com
-License: MIT
-License URI: https://github.com/genesisneo/obtera.com/blob/master/LICENSE
+Description: A modern and elegant WordPress theme designed for bloggers, creatives, and businesses. Obtera.com offers a clean and responsive design, customizable features, and seamless integration with the latest WordPress functionalities to help you create a stunning online presence.
+Requires at least: 6.7
+Tested up to: 7.0
+Requires PHP: 7.2
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: obtera
+Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, featured-images, full-site-editing, block-patterns, rtl-language-support, sticky-post, threaded-comments, translation-ready, wide-blocks, block-styles, style-variations, accessibility-ready, blog, portfolio, news
 */
+
+:root {
+  --wp--preset--font-size--xx-small: 0.625rem;
+  --wp--preset--font-size--x-small: 0.750rem;
+  --wp--preset--font-size--small: 0.875rem;
+  --wp--preset--font-size--medium: 1.000rem;
+  --wp--preset--font-size--large: 1.500rem;
+  --wp--preset--font-size--x-large: 2.000rem;
+  --wp--preset--font-size--xx-large: 2.500rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-size: 100%;
+
+  a {
+    text-decoration-thickness: 1px !important;
+    text-underline-offset: 0.250rem;
+  }
+  
+  h1, h2, h3, h4, h5, h6, blockquote, caption, figcaption, p {
+    text-wrap: pretty;
+  }
+}
+
+/* Page Transitions */
+
+@view-transition {
+  navigation: auto;
+}
+
+::view-transition-group(root) {
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+}
+
+::view-transition-old(active-image-*),
+::view-transition-new(active-image-*) {
+  animation: none;
+  mix-blend-mode: normal;
+  height: 100%;
+  overflow: clip;
+}
+
+main figure.wp-block-post-featured-image img {
+  view-transition-name: var(--featured-image-id);
+}
+
+/* WordPress Blocks */
+
+.wp-site-blocks {
+  background-color: var(--wp--preset--color--white);
+}
+
+.wp-block-navigation__responsive-container-close {
+  top: 16px;
+  right: 16px;
+}
+
+.wp-block-navigation__responsive-container.is-menu-open:not(.disable-default-overlay) {
+  .wp-block-navigation__responsive-container-content {
+    padding-top: 56px;
+  }
+}
+
+.wp-block-latest-posts {
+  .wp-block-latest-posts__featured-image {
+    .wp-post-image {
+      border-radius: 4px;
+    }
+  }
+}
+
+.wp-block-categories-list {
+  .cat-item {
+    display: flex;
+    justify-content: space-between;
+
+    &:not(:last-child) {
+      margin-bottom: 0.5rem;
+    }
+
+    *:first-child {
+      flex: 1;
+    }
+  }
+}
+
+.wp-block-search {
+  .wp-block-search__label {
+    display: none;
+  }
+
+  .wp-block-search__inside-wrapper {
+    border-radius: 4px;
+  }
+}

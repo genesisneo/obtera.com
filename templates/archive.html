@@ -1,0 +1,62 @@
+<!-- wp:group {"tagName":"header","metadata":{"name":"Header"},"style":{"position":{"type":"sticky","top":"0px"}},"layout":{"type":"default"}} -->
+  <header class="wp-block-group">
+    <!-- wp:template-part {"slug":"header","theme":"obtera","tagName":"div"} /-->
+  </header>
+<!-- /wp:group -->
+
+<!-- wp:group {"tagName":"main","metadata":{"name":"Content"},"className":"has-white-background-color has-background","style":{"spacing":{"padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40","left":"var:preset|spacing|40","right":"var:preset|spacing|40"},"margin":{"top":"0","bottom":"0","left":"0","right":"0"}}},"layout":{"type":"constrained"}} -->
+<main class="wp-block-group has-white-background-color has-background"
+  style="margin-top:0;margin-right:0;margin-bottom:0;margin-left:0;padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)">
+  <!-- wp:group {"metadata":{"name":"Titles"},"style":{"spacing":{"padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40","left":"var:preset|spacing|40","right":"var:preset|spacing|40"},"margin":{"top":"0","bottom":"0","left":"0","right":"0"}}},"backgroundColor":"white","layout":{"type":"constrained"}} -->
+  <div class="wp-block-group has-white-background-color has-background"
+    style="margin-top:0;margin-right:0;margin-bottom:0;margin-left:0;padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)">
+    <!-- wp:query-title {"type":"archive","textAlign":"center","align":"wide"} /-->
+
+    <!-- wp:term-description {"align":"wide","style":{"spacing":{"margin":{"top":"0"}},"elements":{"link":{"color":{"text":"var:preset|color|grey"}}},"typography":{"textAlign":"center"}},"textColor":"grey"} /-->
+  </div>
+  <!-- /wp:group -->
+
+  <!-- wp:query {"queryId":102,"query":{"perPage":10,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":true},"metadata":{"patternName":"obtera/query","name":"Query","categories":["posts"]},"className":"alignwide","layout":{"type":"constrained"}} -->
+  <div class="wp-block-query alignwide">
+    <!-- wp:post-template {"align":"wide","style":{"spacing":{"padding":{"top":"0","bottom":"0","left":"0","right":"0"},"margin":{"top":"0","bottom":"0","left":"0","right":"0"}}},"layout":{"type":"grid","columnCount":2}} -->
+    <!-- wp:post-featured-image {"isLink":true} /-->
+
+    <!-- wp:post-date {"format":"F j, Y","metadata":{"bindings":{"datetime":{"source":"core/post-data","args":{"field":"date"}}}}} /-->
+
+    <!-- wp:post-title {"isLink":true,"style":{"spacing":{"margin":{"top":"0","bottom":"0rem"}}}} /-->
+
+    <!-- wp:group {"metadata":{"patternName":"obtera/hidden-post-meta","name":"Hidden post meta"},"style":{"spacing":{"blockGap":"var:preset|spacing|40"}},"layout":{"type":"flex","justifyContent":"left"}} -->
+    <div class="wp-block-group"><!-- wp:post-author-name {"isLink":true} /-->
+
+      <!-- wp:post-terms {"term":"category","prefix":"Categories: "} /-->
+    </div>
+    <!-- /wp:group -->
+
+    <!-- wp:post-excerpt {"moreText":"Read more"} /-->
+
+    <!-- wp:spacer {"height":"1rem"} -->
+    <div style="height:1rem" aria-hidden="true" class="wp-block-spacer"></div>
+    <!-- /wp:spacer -->
+    <!-- /wp:post-template -->
+
+    <!-- wp:query-no-results -->
+    <!-- wp:paragraph {"style":{"typography":{"textAlign":"center"}}} -->
+    <p class="has-text-align-center">No results found.</p>
+    <!-- /wp:paragraph -->
+    <!-- /wp:query-no-results -->
+
+    <!-- wp:query-pagination {"paginationArrow":"arrow","align":"wide","layout":{"type":"flex","justifyContent":"space-between"}} -->
+    <!-- wp:query-pagination-previous /-->
+
+    <!-- wp:query-pagination-next /-->
+    <!-- /wp:query-pagination -->
+  </div>
+  <!-- /wp:query -->
+
+  <!-- wp:spacer {"height":"1rem"} -->
+  <div style="height:1rem" aria-hidden="true" class="wp-block-spacer"></div>
+  <!-- /wp:spacer -->
+</main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","theme":"obtera","tagName":"footer"} /-->
